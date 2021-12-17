@@ -1,4 +1,4 @@
-@mixin font-face($name, $file, $weight: 400, $style: normal) {
+@mixin font-face($name: 'PTSans-Regular', $file: 'PTSans-Regular.ttf', $weight: 400, $style: normal) {
 	@font-face {
 		font-family: "#{$name}";
 		src: local("#{$file}"),
