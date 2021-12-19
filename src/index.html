@@ -12,116 +12,145 @@
 	<main class="main">
 		@@include('components/page-blocks/_video-banner.html')
 		<section class="l-section l-events">
-			<div class="l-container flex --dir-col">	
-				<div class="l-events__title">
-					<h1>Выставки и события</h1>
+			<div class="l-container flex --dir-col">
+				<div class="l-events__container">
+					<div class="l-title">
+						<h1>Выставки и события</h1>
+					</div>
+					<div class="l-events__wrapper flex --dir-col">
+						<div class="l-events__filter">
+							<ul>
+								<li class="filter-title">Фильтр:</li>
+								<li class="filter-active">
+									<a href="#">#Все</a>
+								</li>
+								<li>
+									<a href="#">#текущие выставки</a>
+								</li>
+								<li>
+									<a href="#">#постоянные экспозиции</a>
+								</li>
+							</ul>
+						</div>
+						<div class="l-events__items">
+							<div class="l-events__items-card">
+								<a href="#1">
+									<img src="https://via.placeholder.com/420" alt="">
+								</a>
+								<!-- <div class="l-events__items-card__inner flex --dir-col --just-space"> -->
+									<div class="l-events__items-card__header flex --just-space">
+										<div class="card__header-status">
+											<span>Уже идет</span>
+										</div>
+										<div class="card__header-buy flex">
+											<a href="#">КУПИТЬ БИЛЕТ</a>
+										</div>
+									</div>
+									<div class="l-events__items-card__main flex --dir-col">
+										<div class="card__main-date">
+											<span>23 сентября - 09 января 2022</span>
+										</div>
+										<div class="card__main-name">
+											<span>Выстовка “Страшные воспоминания” </span>
+										</div>
+										<div class="card__main-address flex --just-space">
+											<div class="card__main-address-icon">
+												<svg class="img location-icon">
+													<use xlink:href="img/sprite.svg#css--location"></use>
+												</svg>
+											</div>
+											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										</div>
+									</div>
+								<!-- </div> -->
+							</div>
+							<div class="l-events__items-card">
+								<img src="https://via.placeholder.com/420" alt="">
+								<div class="l-events__items-card__inner flex --dir-col --just-space">
+									<div class="l-events__items-card__header flex --just-space">
+										<div class="card__header-status">
+											<span>Уже идет</span>
+										</div>
+										<div class="card__header-buy flex">
+											<a href="#">КУПИТЬ БИЛЕТ</a>
+										</div>
+									</div>
+									<div class="l-events__items-card__main flex --dir-col">
+										<div class="card__main-date">
+											<span>23 сентября - 09 января 2022</span>
+										</div>
+										<div class="card__main-name">
+											<span>Выстовка “Страшные воспоминания” </span>
+										</div>
+										<div class="card__main-address flex --just-space">
+											<div class="card__main-address-icon">
+												<svg class="img location-icon">
+													<use xlink:href="img/sprite.svg#css--location"></use>
+												</svg>
+											</div>
+											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="l-events__items-card">
+								<img src="https://via.placeholder.com/420" alt="">
+								<div class="l-events__items-card__inner flex --dir-col --just-space">
+									<div class="l-events__items-card__header flex --just-space">
+										<div class="card__header-status">
+											<span>Уже идет</span>
+										</div>
+										<div class="card__header-buy flex">
+											<a href="#">КУПИТЬ БИЛЕТ</a>
+										</div>
+									</div>
+									<div class="l-events__items-card__main flex --dir-col">
+										<div class="card__main-date">
+											<span>23 сентября - 09 января 2022</span>
+										</div>
+										<div class="card__main-name">
+											<span>Выстовка “Страшные воспоминания” </span>
+										</div>
+										<div class="card__main-address flex --just-space">
+											<div class="card__main-address-icon">
+												<svg class="img location-icon">
+													<use xlink:href="img/sprite.svg#css--location"></use>
+												</svg>
+											</div>
+											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="l-events__showMore flex --just-center">
+							<a href="#">Показать еще</a>
+						</div>
+					</div>
 				</div>
-				<div class="l-events__wrapper flex --dir-col">
-					<div class="l-events__filter">
-						<ul>
-							<li class="filter-title">Фильтр:</li>
-							<li class="filter-active">
-								<a href="#">#Все</a>
-							</li>
-							<li>
-								<a href="#">#текущие выставки</a>
-							</li>
-							<li>
-								<a href="#">#постоянные экспозиции</a>
-							</li>
-						</ul>
+			</div>
+		</section>
+		<section class="l-section l-news">
+			<div class="l-container">
+				<div class="l-news__container flex --dir-col">
+					<div class="l-title">
+						<h1>Новости</h1>
 					</div>
-					<div class="l-events__items flex --just-space">
-						<div class="l-events__items-card">
-							<img src="https://via.placeholder.com/420x360" alt="">
-							<div class="l-events__items-card__inner flex --dir-col --just-space">
-								<div class="l-events__items-card__header flex --just-space">
-									<div class="card__header-status">
-										<span>Уже идет</span>
-									</div>
-									<div class="card__header-buy flex">
-										<a href="#">КУПИТЬ БИЛЕТ</a>
-									</div>
+					<div class="l-news__wrapper flex --dir-col">
+						<div class="l-news__items">
+							<div class="l-news__items">
+								<div class="l-news__items-image">
+									<img src="https://via.placeholder.com/420/FFFF00/000000?Text=WebsiteBuilders.com" alt="">
 								</div>
-								<div class="l-events__items-card__main flex --dir-col">
-									<div class="card__main-date">
-										<span>23 сентября - 09 января 2022</span>
-									</div>
-									<div class="card__main-name">
-										<span>Выстовка “Страшные воспоминания” </span>
-									</div>
-									<div class="card__main-address flex --just-space">
-										<div class="card__main-address-icon">
-											<svg class="img location-icon">
-												<use xlink:href="img/sprite.svg#css--location"></use>
-											</svg>
-										</div>
-										<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
-									</div>
+								<div class="l-news__items-description flex --dir-col">
+									<div class="news__items-description__date"></div>
+									<div class="news__items-description__name"></div>
 								</div>
 							</div>
 						</div>
-						<div class="l-events__items-card">
-							<img src="https://via.placeholder.com/420x360" alt="">
-							<div class="l-events__items-card__inner flex --dir-col --just-space">
-								<div class="l-events__items-card__header flex --just-space">
-									<div class="card__header-status">
-										<span>Уже идет</span>
-									</div>
-									<div class="card__header-buy flex">
-										<a href="#">КУПИТЬ БИЛЕТ</a>
-									</div>
-								</div>
-								<div class="l-events__items-card__main flex --dir-col">
-									<div class="card__main-date">
-										<span>23 сентября - 09 января 2022</span>
-									</div>
-									<div class="card__main-name">
-										<span>Выстовка “Страшные воспоминания” </span>
-									</div>
-									<div class="card__main-address flex --just-space">
-										<div class="card__main-address-icon">
-											<svg class="img location-icon">
-												<use xlink:href="img/sprite.svg#css--location"></use>
-											</svg>
-										</div>
-										<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
-									</div>
-								</div>
-							</div>
+						<div class="l-events__showMore flex --just-center">
+							<a href="#">Показать еще</a>
 						</div>
-						<div class="l-events__items-card">
-							<img src="https://via.placeholder.com/420x360" alt="">
-							<div class="l-events__items-card__inner flex --dir-col --just-space">
-								<div class="l-events__items-card__header flex --just-space">
-									<div class="card__header-status">
-										<span>Уже идет</span>
-									</div>
-									<div class="card__header-buy flex">
-										<a href="#">КУПИТЬ БИЛЕТ</a>
-									</div>
-								</div>
-								<div class="l-events__items-card__main flex --dir-col">
-									<div class="card__main-date">
-										<span>23 сентября - 09 января 2022</span>
-									</div>
-									<div class="card__main-name">
-										<span>Выстовка “Страшные воспоминания” </span>
-									</div>
-									<div class="card__main-address flex --just-space">
-										<div class="card__main-address-icon">
-											<svg class="img location-icon">
-												<use xlink:href="img/sprite.svg#css--location"></use>
-											</svg>
-										</div>
-										<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="l-events__showMore flex --just-center">
-						<a href="#">Показать еще</a>
 					</div>
 				</div>
 			</div>
