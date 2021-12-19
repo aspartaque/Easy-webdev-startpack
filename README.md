@@ -1,1 +1,1 @@
-npm run i
+npm i
