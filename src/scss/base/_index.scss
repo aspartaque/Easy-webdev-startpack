@@ -172,6 +172,12 @@ $mainColor: #132F85;
         left: 0;
         width: 100%;
         padding: 20px;
+        @media screen and (max-width: 768px) {
+          padding: 10px;
+        }
+        @media screen and (max-width: 630px) {
+          padding: 16px;
+        }
       }
       &__main {
         position: absolute;
@@ -179,6 +185,12 @@ $mainColor: #132F85;
         left: 0;
         width: 100%;
         padding: 20px;
+        @media screen and (max-width: 768px) {
+          padding: 10px;
+        }
+        @media screen and (max-width: 630px) {
+          padding: 16px;
+        }
       }
     }
   }
