@@ -29,6 +29,48 @@
               <use xlink:href="img/sprite.svg#css--menu"></use>
             </svg>
           </div>
+          <div class="mobile-menu__container">
+            <div class="l-container">
+              <div class="mobile-menu__container-button-impaired">
+                <div class="l-impaired__button">
+                  <a href="#">
+                    <svg class="img svg-eye_glasses">
+                      <use xlink:href="img/sprite.svg#css--eye-glasses"></use>
+                    </svg>
+                    <span>Версия для слабовидящих</span>
+                  </a>
+                </div>
+              </div>
+              <div class="mobile-menu__container-links">
+                <ul>
+                  <li class="active">
+                    <a href="#">Посетителям</a>
+                  </li>
+                  <li>
+                    <a href="#">Коллекция</a>
+                  </li>
+                  <li>
+                    <a href="#">Наука</a>
+                  </li>
+                  <li>
+                    <a href="#">О музее</a>
+                  </li>
+                  <li>
+                    <a href="#">выставки и события</a>
+                  </li>
+                  <li>
+                    <a href="#">поддержать музей</a>
+                  </li>
+                  <li>
+                    <a href="#">просвещение</a>
+                  </li>
+                  <li>
+                    <a href="#">пушкинская карта</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="l-header__top-left">
           <div class="l-header__top-left__logo">
@@ -94,30 +136,229 @@
     <div class="l-header__inner">
       <div class="l-container flex">
         <div class="l-header__inner-nav">
-          <ul>
+          <ul class="menu dropdown dropdown-menu-custom" data-dropdown-menu>
             <li>
-              <a href="">Посетителям</a>
+              <a href="#Item-1" data-click-open="true">Посетителям</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    Билеты, льготы и беслатные дни
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Правила посещения
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Арт-кафе
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Библиотека
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Доступная среда
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Здания и часы работы
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Арт-салон
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">Выставки и события</a>
+              <a href="#Item-2">Выставки и события</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    Текущие выставки
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Новости
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Архив выставок
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Постоянные экспозиции
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Виртуальные выставки
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">Просвещения</a>
+              <a href="#Item-3">Просвещения</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    Творческие мастерские
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Экскурсии
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Концерты и спектакли
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Публичные программы
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Лекторий
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Музей - детям!
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">О музее</a>
+              <a href="#Item-4">О музее</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    История
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Руководство
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Профсоюз
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Контакты
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Частозадаваемые вопросы
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Миссия
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Документы
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Вакансии
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Опрос
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">Коллекция</a>
+              <a href="#Item-5">Коллекция</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    Русское искусство XVIII - начала XX
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Искусство Якутии XVIII - XXI вв.
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Отечественное искусство XX - XXI вв.
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Зарубежное искусство XVI - начала XX века.
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">Наука</a>
+              <a href="#Item-6">Наука</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    Издания и публикации
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Проекты
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">Поддержать музей</a>
+              <a href="#Item-7">Поддержать музей</a>
+              <ul class="menu menu-container">
+                <li>
+                  <a href="#">
+                    Попечительский совет
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Сделать пожертвования
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Фонд развития
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Стать волонтером
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="">Пушкинская карта</a>
+              <a href="#">Пушкинская карта</a>
             </li>
           </ul>
         </div>
@@ -177,9 +418,6 @@
 						</div>
 						<div class="l-events__items">
 							<div class="l-events__items-card">
-								<a href="#1">
-									<img src="https://via.placeholder.com/420" alt="">
-								</a>
 								<div class="l-events__items-card__header flex --just-space">
 									<div class="card__header-status">
 										<span>Уже идет</span>
@@ -188,27 +426,27 @@
 										<a href="#">КУПИТЬ БИЛЕТ</a>
 									</div>
 								</div>
-								<div class="l-events__items-card__main flex --dir-col">
-									<div class="card__main-date">
-										<span>23 сентября - 09 января 2022</span>
-									</div>
-									<div class="card__main-name">
-										<span>Выстовка “Страшные воспоминания” </span>
-									</div>
-									<div class="card__main-address flex --just-space">
-										<div class="card__main-address-icon">
-											<svg class="img location-icon">
-												<use xlink:href="img/sprite.svg#css--location"></use>
-											</svg>
+								<a href="#1">
+									<img src="https://via.placeholder.com/420" alt="">
+									<div class="l-events__items-card__main flex --dir-col">
+										<div class="card__main-date">
+											<span>23 сентября - 09 января 2022</span>
 										</div>
-										<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										<div class="card__main-name">
+											<span>Выстовка “Страшные воспоминания” </span>
+										</div>
+										<div class="card__main-address flex --just-space">
+											<div class="card__main-address-icon">
+												<svg class="img location-icon">
+													<use xlink:href="img/sprite.svg#css--location"></use>
+												</svg>
+											</div>
+											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="l-events__items-card">
-								<a href="#1">
-									<img src="https://via.placeholder.com/420" alt="">
-								</a>
 								<div class="l-events__items-card__header flex --just-space">
 									<div class="card__header-status">
 										<span>Уже идет</span>
@@ -217,27 +455,27 @@
 										<a href="#">КУПИТЬ БИЛЕТ</a>
 									</div>
 								</div>
-								<div class="l-events__items-card__main flex --dir-col">
-									<div class="card__main-date">
-										<span>23 сентября - 09 января 2022</span>
-									</div>
-									<div class="card__main-name">
-										<span>Выстовка “Страшные воспоминания” </span>
-									</div>
-									<div class="card__main-address flex --just-space">
-										<div class="card__main-address-icon">
-											<svg class="img location-icon">
-												<use xlink:href="img/sprite.svg#css--location"></use>
-											</svg>
+								<a href="#1">
+									<img src="https://via.placeholder.com/420" alt="">
+									<div class="l-events__items-card__main flex --dir-col">
+										<div class="card__main-date">
+											<span>23 сентября - 09 января 2022</span>
 										</div>
-										<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										<div class="card__main-name">
+											<span>Выстовка “Страшные воспоминания” </span>
+										</div>
+										<div class="card__main-address flex --just-space">
+											<div class="card__main-address-icon">
+												<svg class="img location-icon">
+													<use xlink:href="img/sprite.svg#css--location"></use>
+												</svg>
+											</div>
+											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="l-events__items-card">
-								<a href="#1">
-									<img src="https://via.placeholder.com/420" alt="">
-								</a>
 								<div class="l-events__items-card__header flex --just-space">
 									<div class="card__header-status">
 										<span>Уже идет</span>
@@ -246,22 +484,25 @@
 										<a href="#">КУПИТЬ БИЛЕТ</a>
 									</div>
 								</div>
-								<div class="l-events__items-card__main flex --dir-col">
-									<div class="card__main-date">
-										<span>23 сентября - 09 января 2022</span>
-									</div>
-									<div class="card__main-name">
-										<span>Выстовка “Страшные воспоминания” </span>
-									</div>
-									<div class="card__main-address flex --just-space">
-										<div class="card__main-address-icon">
-											<svg class="img location-icon">
-												<use xlink:href="img/sprite.svg#css--location"></use>
-											</svg>
+								<a href="#1">
+									<img src="https://via.placeholder.com/420" alt="">
+									<div class="l-events__items-card__main flex --dir-col">
+										<div class="card__main-date">
+											<span>23 сентября - 09 января 2022</span>
 										</div>
-										<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										<div class="card__main-name">
+											<span>Выстовка “Страшные воспоминания” </span>
+										</div>
+										<div class="card__main-address flex --just-space">
+											<div class="card__main-address-icon">
+												<svg class="img location-icon">
+													<use xlink:href="img/sprite.svg#css--location"></use>
+												</svg>
+											</div>
+											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
+										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 						<div class="l-events__showMore flex --just-center">
@@ -425,10 +666,10 @@
       </div>
       <div class="l-map__wrapper flex --dir-col">
         <div class="l-events__filter">
-          <ul data-tabs id="example-tabs" class="tabs">
+          <ul class="" data-tabs id="example-tabs">
             <li class="filter-title">Филиалы:</li>
-            <li class="filter-active tabs-title">
-              <a href="#panel1" aria-selected="true">#В Якутске</a>
+            <li class="tabs-title is-active">
+              <a href="#panel1" aria-selected="false" >#В Якутске</a>
             </li>
             <li class="tabs-title">
               <a href="#panel2">#В Районах</a>
@@ -438,7 +679,7 @@
         <div class="l-map__main">
           <div class="l-map__main-nav tabs-content" data-tabs-content="example-tabs">
             <div class="tabs-panel is-active" id="panel1">
-              <ul class="accordion data-accordion data-allow-all-closed="true">
+              <ul class="accordion" data-accordion data-allow-all-closed="true">
                 <li class="accordion-item l-map__main-li" data-accordion-item>
                   <a href="#" class="accordion-title">
                     <div>
@@ -670,7 +911,7 @@
               </ul>
             </div>
             <div class="tabs-panel" id="panel2">
-              <ul class="accordion data-accordion data-allow-all-closed="true">
+              <ul class="accordion" data-accordion data-allow-all-closed="true">
                 <li class="accordion-item l-map__main-li" data-accordion-item>
                   <a href="#" class="accordion-title">
                     <div>
@@ -679,7 +920,7 @@
                       </svg>
                     </div>
                     <span>
-                      Национальный художественный музей Республики Саха (Якутия)
+                      awdawха (Якутия)
                     </span>
                   </a>
                   <div class="accordion-content l-map__main-content" data-tab-content>
@@ -755,7 +996,7 @@
                       </svg>
                     </div>
                     <span>
-                      Галерея зарубежного искусства им. М.Ф. Габышева
+                     d21d12d1я зарубежного иdawdawdawГабышева
                     </span>
                   </a>
                   <div class="accordion-content l-map__main-content" data-tab-content>

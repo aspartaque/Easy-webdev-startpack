@@ -43,6 +43,7 @@ $mainColor: #132F85;
   &__filter {
     ul {
       display: flex;
+      align-items: center;
       @media screen and (max-width: 630px) {
         display: flex;
         flex-wrap: wrap;
