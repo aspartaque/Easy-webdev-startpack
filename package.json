@@ -43,5 +43,7 @@
     "video.js": "^7.17.0",
     "vinyl-ftp": "^0.6.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
 }
