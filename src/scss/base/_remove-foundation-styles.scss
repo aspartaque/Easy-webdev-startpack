@@ -1,0 +1,46 @@
+.accordion-title {
+  border: none;
+  background: unset;
+  padding: 0;
+}
+.accordion-title:focus, .accordion-title:hover {
+  background: none;
+}
+.tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
+  color: #030303;
+  background: none;
+}
+.tabs {
+  border: none;
+  background: none;
+}
+.tabs-content {
+  background: none;
+  border: none;
+}
+.tabs-title>a {
+  padding: 0;
+}
+.tabs-panel {
+  padding: 0;
+}
+.accordion {
+  background: #FFFDFB;
+}
+.accordion-content {
+  padding: 0;
+  border: none;
+  margin-top: 20px;
+  background: #FFFDFB;
+  ul {
+    margin: 0;
+    li {
+      padding: 10px 10px;
+      border-bottom: none;
+      a {
+        font-weight: normal;
+        text-transform: unset;
+      }
+    }
+  }
+}
