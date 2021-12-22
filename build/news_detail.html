@@ -606,158 +606,255 @@
 </header>
 
 	<main class="main">
-		<section class="l-section l-video__banner">
-  <div class="l-video__banner-container">
-    <a href="" class="video-detail__url">
-      <div class="l-video__banner-player">
-        <video
-          poster="MY_VIDEO_POSTER.jpg"
-          autoplay
-          muted
-          loop
-        >
-          <source src="video/stock-video.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="l-video__banner-content">
-        <div class="l-video__banner-content__title">
-          <span>ДОБРО ПОЖАЛОВАТЬ В НАШ МУЗЕЙ</span>
-        </div>
-        <div class="l-video__banner-content__description">
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Posuere ac ut dui etiam ac a dapibus vitae dui. Orci, sed ornare eget varius.
-          </span>
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-		<section class="l-section l-events">
-			<div class="l-container flex --dir-col">
-				<div class="l-events__container">
-					<div class="l-title">
-						<h1>Выставки и события</h1>
-					</div>
-					<div class="l-events__wrapper flex --dir-col">
-						<div class="l-events__filter">
-							<ul>
-								<li class="filter-title">Фильтр:</li>
-								<li class="filter-active">
-									<a href="#">#Все</a>
-								</li>
-								<li>
-									<a href="#">#текущие выставки</a>
-								</li>
-								<li>
-									<a href="#">#постоянные экспозиции</a>
-								</li>
-							</ul>
-						</div>
-						<div class="l-events__items">
-							<div class="l-events__items-card">
-								<div class="l-events__items-card__header flex --just-space">
-									<div class="card__header-status">
-										<span>Уже идет</span>
-									</div>
-									<div class="card__header-buy flex">
-										<a href="#">КУПИТЬ БИЛЕТ</a>
-									</div>
-								</div>
-								<a href="#1">
-									<img src="https://via.placeholder.com/420" alt="">
-									<div class="l-events__items-card__main flex --dir-col">
-										<div class="card__main-date">
-											<span>23 сентября - 09 января 2022</span>
-										</div>
-										<div class="card__main-name">
-											<span>Выстовка “Страшные воспоминания” </span>
-										</div>
-										<div class="card__main-address flex --just-space">
-											<div class="card__main-address-icon">
-												<svg class="img location-icon">
-													<use xlink:href="img/sprite.svg#css--location"></use>
-												</svg>
-											</div>
-											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="l-events__items-card">
-								<div class="l-events__items-card__header flex --just-space">
-									<div class="card__header-status">
-										<span>Уже идет</span>
-									</div>
-									<div class="card__header-buy flex">
-										<a href="#">КУПИТЬ БИЛЕТ</a>
-									</div>
-								</div>
-								<a href="#1">
-									<img src="https://via.placeholder.com/420" alt="">
-									<div class="l-events__items-card__main flex --dir-col">
-										<div class="card__main-date">
-											<span>23 сентября - 09 января 2022</span>
-										</div>
-										<div class="card__main-name">
-											<span>Выстовка “Страшные воспоминания” </span>
-										</div>
-										<div class="card__main-address flex --just-space">
-											<div class="card__main-address-icon">
-												<svg class="img location-icon">
-													<use xlink:href="img/sprite.svg#css--location"></use>
-												</svg>
-											</div>
-											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="l-events__items-card">
-								<div class="l-events__items-card__header flex --just-space">
-									<div class="card__header-status">
-										<span>Уже идет</span>
-									</div>
-									<div class="card__header-buy flex">
-										<a href="#">КУПИТЬ БИЛЕТ</a>
-									</div>
-								</div>
-								<a href="#1">
-									<img src="https://via.placeholder.com/420" alt="">
-									<div class="l-events__items-card__main flex --dir-col">
-										<div class="card__main-date">
-											<span>23 сентября - 09 января 2022</span>
-										</div>
-										<div class="card__main-name">
-											<span>Выстовка “Страшные воспоминания” </span>
-										</div>
-										<div class="card__main-address flex --just-space">
-											<div class="card__main-address-icon">
-												<svg class="img location-icon">
-													<use xlink:href="img/sprite.svg#css--location"></use>
-												</svg>
-											</div>
-											<span>НХМ РС(Я) г.Якутск, ул. Кирова 9, выстовачный зал, 1 этаж</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="l-events__showMore flex --just-center">
-							<a href="#">Показать еще</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="l-section l-news">
-			<div class="l-container">
-				<div class="l-news__container flex --dir-col">
-					<div class="l-title">
-						<h1>Новости</h1>
-					</div>
-					<div class="l-news__wrapper flex --dir-col">
-						<div class="l-news__items-row">
+		<section class="l-layout">
+      <div class="l-container">
+        <div class="l-layout-container flex --dir-col">
+          <div class="l-breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Здания и часы работы </a>
+              </li>
+            </ul>
+          </div>
+          <div class="l-sm-container">
+            <div class="l-title">
+              <h1>Выходные в Национальном художесвенном музее РС(Я)</h1>
+            </div>
+            <div class="l-detail__date">
+              17 декабря 2021
+            </div>
+            <div class="l-layout__wrapper flex --dir-col l-detail-layout">
+              <div class="l-detail__main-img">
+                <img src="https://via.placeholder.com/1000" alt="">
+              </div>
+              <div class="l-detail__text-container">
+                <div class="l-detail__text">
+                  Дорогие друзья! Приглашаем гостей и жителей города провести предпраздничные зимние дни и свои выходные в Национальном художественном музее РС (Я)! Приходите вместе с семьей и друзьями открывать для себя увлекательный мир изобразительного искусства, познакомиться с работами якутских и российских художников, послушать экскурсии, поучаствовать в квест-играх, погрузиться в творческий процесс на тематических мастер-классах и музейных занятиях. Узнавайте новое, вдохновляйтесь, творите и отдыхайте вместе с НХМ РС (Я)!
+
+
+Постоянные экспозиции:
+
+• Русское и отечественное искусство XVIII-начала XX веков, искусство Якутии XIX-XXI вв.  (Кирова, 9).
+• Картинная галерея академика Афанасия Осипова (Хабарова, 27).
+
+
+Временные выставки:
+
+• Выставка «Геннадий Сотников. Сценография. Графика. Живопись»
+
+На выставке представлена ретроспективная коллекция произведений мастера, охватывающая временной период с 1980-х по 2000-е гг. Эскизы к легендарным спектаклям «Желанный голубой берег мой», «Люди тундры» (по мотивам романа С. Курилова «Ханидуо и Халерхаа» (1988); графические произведения из циклов «Беседки» (1998), «Городки» (1999), «Хронотоп Нимфея» (2003), «Веревки» (2004) и др. погрузят зрителя в увлекательный мир художника-философа, художника-исследователя.
+
+Место проведения: ул. Кирова, 9, 2 этаж, зал «Графика Якутии»
+
+
+• Выставка «История игрушек»
+
+Выставочный проект «История игрушек» – это выставка-приключение, выставка-путешествие, своеобразным героем которой становится сам посетитель, и побывать на которой будет интересно и детям, и взрослым. Основу экспозиции составили произведения народного и декоративно-прикладного искусства.
+
+Место проведения: ул. Кирова, 9, III этаж
+
+
+• Выставка «Моя Мадонна»
+
+Выставка посвящена Дню матери. Иная трактовка, интересный взгляд на универсальную константу – образ Матери, Мамы, Мадонны – отличает данную экспозицию. Кто же она, Моя Мадонна? У каждого времени – своя мадонна. Своя она и у каждого художника. Хронологический диапазон произведений, представленных на выставке – от начала XX века до 2000-х гг., говорит об универсальности и абсолютной вневременности данной темы.
+
+
+•Выставка мистических стерео-портретов «Страшные воспоминания».
+
+Вниманию зрителей представлены 32 произведения из частной коллекции американского фотохудожника Эдварда Аллена. Данные работы художник создал в технике стерео-варио на основе оригинальных фотографий викторианской эпохи, которые автор приобрел на различных антикварных распродажах и обработал вручную. Для получения стереоэффекта им используются полоски из цилиндрических линз (лентикуляр). Созданные Эдвардом Алленом фотокартины открывают любителям ужастиков и мистики мир иного восприятия реальности.
+
+Место проведения: ул. Кирова, 9, 1 этаж, выставочный зал. Вход на выставку по отдельной цене.
+
+
+• Выставка западноевропейского искусства «От Возрождения до романтизма».
+
+Место проведения: ул. Кирова, 9, I этаж.
+
+Экскурсии, мастер-классы и квест-игры в выходные дни в НХМ РС (Я) (Кирова, 9).
+
+
+Мастер-классы в творческом пространстве НХМ РС (Я):
+
+18 декабря в 11.00 ч.
+
+Мастер-класс «Натюрморт с цветами» по живописи акрилом (6+)
+
+19 декабря 11.00 ч.
+
+
+Мастер-класс «Зимний пейзаж» по живописи акрилом (6+)
+
+Стоимость: 1200 руб. Все необходимые материалы предоставляются. Количество мест ограничено. Продолжительность: 2 ч.
+
+Предварительная запись по тел.: 8 (914) 296-87-10 (WhatsApp).
+
+18 и 19 декабря, в 12:00 и 15:00 ч.
+
+
+Мастер-класс «Эльфийская диадема» в технике «wirewrapart» (12+)
+
+Стоимость: 1000 руб. Все необходимые материалы предоставляются. Количество мест ограничено. Продолжительность: 2 ч.
+
+Предварительная запись по тел.: 8 (999) 173-42-44 (WhatsApp).
+
+19 декабря в 11.00, 12. 00, 14.00, 15.00 и 16.00
+
+11:00 ч. – Обзорная экскурсия по постоянной экспозиции НХМ РС (Я). Продолжительность: 1 час. Стоимость: 50-350 руб.
+
+12:00 ч. – Тематическая экскурсия по временной выставке «Геннадий Сотников. Сценография. Графика. Живопись»
+
+14:00 ч. – Экскурсия «Русское искусство XVIII – начала XX века».
+
+Продолжительность: 45 минут. Стоимость: 100-1000 руб.
+
+15:00 ч. – Тематическая экскурсия по постоянной экспозиции и квестовая игра «Мозаика искусства» (6+).
+
+Продолжительность: 60 мин. Стоимость: 150-250 руб.
+
+16:00 ч. – Экскурсия «Искусство Якутии».
+
+Продолжительность: 45 минут. Стоимость: 100-1000 руб.
+
+Справки и предварительная запись по тел.: 8 (4112) 33-52-79,
+8 (999) 173-42-44. Адрес: г. Якутск, основное здание музея по адресу: ул. Кирова, 9.
+
+Творческие занятия в Картинной галерее академика Афанасия Осипова
+
+18 и 19 декабря в 10.00, 11.00, 12.00, 14.00, 15.00, 16.00
+
+
+• Занятие выходного дня для детей (6+). Тема: Зимние узоры. Материалы: бумага для акварели А3, гуашь, кисточки, простой карандаш, ластик, палитра (все необходимые материалы принести с собой). Продолжительность занятия: 60 минут. Стоимость: 250 руб.
+
+Справки и предварительная запись по тел.: 8 (964) 420-48-64
+Адрес: г. Якутск, ул. Хабарова, 27, КГАО.
+
+Мастер-классы в Доме художника:
+
+18 и 19 декабря в 11:00 ч.
+
+
+• Мастер-класс творческой мастерской по национальному шитью «Күндүүлэ» (16+).
+
+Тема: Конструирование и шитье меховой варежки. Материалы: мех 30см., калька, карандаш, нитки, иголки (все необходимые материалы принести с собой). Продолжительность: 2 ч. Стоимость: 2 000 руб.
+
+Справки и предварительная запись по тел. 8 (924) 661-57-55
+
+18 декабря, в 14:00
+
+
+• Творческое занятие по рисованию в студии «Палитра» (6+).
+
+Тема: Мандариновый снегопад. Материал: бумага, гуашь. Продолжительность: 60 минут. Стоимость: 250 руб. (без предоставления материалов), 350 руб. (с предоставлением материалов).
+
+19 декабря, в 15:00
+
+
+• Мастер-класс по живописи в студии «Арт Холл» (12+).Тема: Сияние праздника.
+
+Материалы на выбор:
+
+1.картон 18х24 см., акрил. Продолжительность: 2 ч.
+
+Стоимость: 1200 руб. Все необходимые материалы предоставляются.
+
+2. картон 30х40 см., акрил Продолжительность: 2 ч.
+
+Стоимость: 1500 руб. Все необходимые материалы предоставляются.
+
+Справки и предварительная запись по тел.: 8 (962) 737-11-37
+
+Адрес: г. Якутск, ул. Лермонтова, 31/2Б, Дом художника
+
+Заказ экскурсий и справки по телефону: 8 (4112) 33-52-79
+
+Режим работы музея и его филиалов: с 10.00 до 18.00 ч. (касса до 17.30)
+
+Внимание! Центральный вход основного здания (Кирова, 9) закрыт в связи с проведением ремонта фасада. Вход через внутренний двор со стороны ул. Кирова. Приносим извинения за временные неудобства!
+
+http://www.sakhamuseum.ru/news/vremennoye-zakrytiy...
+
+Просим не забывать о временных правилах для посещения музея и необходимости предъявить QR-код о вакцинации от COVID-19 вместе с документом, подтверждающим личность.  Ознакомиться с временными правилами можно по ссылке: http://www.sakhamuseum.ru/news/vremennyye-pravila-...
+                </div>  
+              </div>
+
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/293" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/590" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/350" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/630" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="l-detail__repost">
+                <div class="l-detail__repost-socials">
+                  <span>
+                    Поделиться
+                  </span>
+                  <a href="#">
+                    <svg class="social-link">
+                      <use xlink:href="img/sprite.svg#css--facebook"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="social-link">
+                      <use xlink:href="img/sprite.svg#css--telegram"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="social-link">
+                      <use xlink:href="img/sprite.svg#css--twitter"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="social-link">
+                      <use xlink:href="img/sprite.svg#css--vk"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="social-link">
+                      <use xlink:href="img/sprite.svg#css--whatsapp"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="social-link">
+                      <use xlink:href="img/sprite.svg#css--youtube"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="l-detail__back">
+                <div class="l-detail__back-btn">
+                  <a href="#">Вернуться обратно</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-news-list">
+            <div class="l-title">
+              <h1>Читайте также</h1>
+            </div>
+            <div class="l-news__items-row">
 							<div class="l-news__item flex --dir-col">
 								<div class="l-news__items-image">
 									<a href="#">
@@ -816,509 +913,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="l-events__showMore flex --just-center">
-							<a href="#">Смотреть все</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="l-section l-collections">
-			<div class="l-container">
-				<div class="l-collections__container flex --dir-col">
-					<div class="l-title">
-						<h1>Коллекции</h1>
-					</div>
-					<div class="l-collections__wrapper flex --dir-col">
-						<div class="l-collections__row">
-							<div class="l-collections__item">
-								<div class="l-collections__item-image">
-									<a href="#">
-										<img src="https://via.placeholder.com/420x473/3b4b82/000000?Text=WebsiteBuilders.com" alt="">
-									</a>
-								</div>
-								<div class="l-collections__item-description">
-									<div class="l-collections__item-description-name">
-										<span>
-											Западнояевропейское искусство XVI-XIX веков
-										</span>
-									</div>
-									<div class="l-collections__item-description-author">
-										<span>
-											Франчобиджо. Мадонна у колодца
-										</span>
-									</div>
-								</div>
-							</div>
-							<div class="l-collections__item">
-								<div class="l-collections__item-image">
-									<a href="#">
-										<img src="https://via.placeholder.com/1140x1024/3b4b82/000000?Text=WebsiteBuilders.com" alt="">
-									</a>
-								</div>
-								<div class="l-collections__item-description">
-									<div class="l-collections__item-description-name">
-										<span>
-											Живопись Якутии
-										</span>
-									</div>
-									<div class="l-collections__item-description-author">
-										<span>
-											Осипов А.Н. В ауре космоса 2001. Холст, масло
-										</span>
-									</div>
-								</div>
-							</div>
-							<div class="l-collections__item">
-								<div class="l-collections__item-image">
-									<a href="#">
-										<img src="https://via.placeholder.com/1080x960/3b4b82/000000?Text=WebsiteBuilders.com" alt="">
-									</a>
-								</div>
-								<div class="l-collections__item-description">
-									<div class="l-collections__item-description-name">
-										<span>
-											Народное и дикоративно-прикладное искусство Якутии
-										</span>
-									</div>
-									<div class="l-collections__item-description-author">
-										<span>
-											Федулова Н.Е. Гобелен “Невеста”. 2005. Конский волос. Ручное качество
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="l-events__showMore flex --just-center">
-							<a href="#">Смотреть всю коллекцию</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="l-section l-map">
-  <div class="l-container">
-    <div class="l-map-container flex --dir-col">
-      <div class="l-title">
-        <h1>Здания и часы работы</h1>
-      </div>
-      <div class="l-map__wrapper flex --dir-col">
-        <div class="l-events__filter">
-          <ul class="" data-tabs id="example-tabs">
-            <li class="filter-title">Филиалы:</li>
-            <li class="tabs-title is-active">
-              <a href="#panel1" aria-selected="false" >#В Якутске</a>
-            </li>
-            <li class="tabs-title">
-              <a href="#panel2">#В Районах</a>
-            </li>
-          </ul>
-        </div>
-        <div class="l-map__main">
-          <div class="l-map__main-nav tabs-content" data-tabs-content="example-tabs">
-            <div class="tabs-panel is-active" id="panel1">
-              <ul class="accordion" data-accordion data-allow-all-closed="true">
-                <li class="accordion-item l-map__main-li" data-accordion-item>
-                  <a href="#" class="accordion-title">
-                    <div>
-                      <svg class="img location-icon">
-                        <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
-                      </svg>
-                    </div>
-                    <span>
-                      Национальный художественный музей Республики Саха (Якутия)
-                    </span>
-                  </a>
-                  <div class="accordion-content l-map__main-content" data-tab-content>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--location-map"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          Кирова 9, 3этаж
-                        </div>
-                        <div>
-                          <span>
-                            Октябрьский округ, Якутск, 677018
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--time"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          СР <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ЧТ <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ПТ - ВС  <span>12:00 - 20:00</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--phone"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          +7 (4112) 33-52079 <span>касса</span>
-                        </div>
-                        <div>
-                          +7 (4112) 33-52079 <span>приемная</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          sakhamuseum@mail.ru
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="accordion-item l-map__main-li" data-accordion-item>
-                  <a href="#" class="accordion-title">
-                    <div>
-                      <svg class="img location-icon">
-                        <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
-                      </svg>
-                    </div>
-                    <span>
-                      Галерея зарубежного искусства им. М.Ф. Габышева
-                    </span>
-                  </a>
-                  <div class="accordion-content l-map__main-content" data-tab-content>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--location-map"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          Кирова 9, 3этаж
-                        </div>
-                        <div>
-                          <span>
-                            Октябрьский округ, Якутск, 677018
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--time"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          СР <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ЧТ <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ПТ - ВС  <span>12:00 - 20:00</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--phone"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          +7 (4112) 33-52079 <span>касса</span>
-                        </div>
-                        <div>
-                          +7 (4112) 33-52079 <span>приемная</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          sakhamuseum@mail.ru
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="accordion-item l-map__main-li" data-accordion-item>
-                  <a href="#" class="accordion-title">
-                    <div>
-                      <svg class="img location-icon">
-                        <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
-                      </svg>
-                    </div>
-                    <span>
-                      Картинная галерея академика Афанасия Осипова
-                    </span>
-                  </a>
-                  <div class="accordion-content l-map__main-content" data-tab-content>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--location-map"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          Кирова 9, 3этаж
-                        </div>
-                        <div>
-                          <span>
-                            Октябрьский округ, Якутск, 677018
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--time"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          СР <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ЧТ <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ПТ - ВС  <span>12:00 - 20:00</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--phone"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          +7 (4112) 33-52079 <span>касса</span>
-                        </div>
-                        <div>
-                          +7 (4112) 33-52079 <span>приемная</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          sakhamuseum@mail.ru
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="tabs-panel" id="panel2">
-              <ul class="accordion" data-accordion data-allow-all-closed="true">
-                <li class="accordion-item l-map__main-li" data-accordion-item>
-                  <a href="#" class="accordion-title">
-                    <div>
-                      <svg class="img location-icon">
-                        <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
-                      </svg>
-                    </div>
-                    <span>
-                      awdawха (Якутия)
-                    </span>
-                  </a>
-                  <div class="accordion-content l-map__main-content" data-tab-content>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--location-map"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          Кирова 9, 3этаж
-                        </div>
-                        <div>
-                          <span>
-                            Октябрьский округ, Якутск, 677018
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--time"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          СР <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ЧТ <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ПТ - ВС  <span>12:00 - 20:00</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--phone"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          +7 (4112) 33-52079 <span>касса</span>
-                        </div>
-                        <div>
-                          +7 (4112) 33-52079 <span>приемная</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          sakhamuseum@mail.ru
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="accordion-item l-map__main-li" data-accordion-item>
-                  <a href="#" class="accordion-title">
-                    <div>
-                      <svg class="img location-icon">
-                        <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
-                      </svg>
-                    </div>
-                    <span>
-                     d21d12d1я зарубежного иdawdawdawГабышева
-                    </span>
-                  </a>
-                  <div class="accordion-content l-map__main-content" data-tab-content>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--location-map"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          Кирова 9, 3этаж
-                        </div>
-                        <div>
-                          <span>
-                            Октябрьский округ, Якутск, 677018
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--time"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          СР <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ЧТ <span>12:00 - 20:00</span>
-                        </div>
-                        <div>
-                          ПТ - ВС  <span>12:00 - 20:00</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--phone"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address">
-                        <div>
-                          +7 (4112) 33-52079 <span>касса</span>
-                        </div>
-                        <div>
-                          +7 (4112) 33-52079 <span>приемная</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="l-map__main-content__el">
-                      <div class="content__el-icon">
-                        <svg class="img location_map-icon">
-                          <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
-                        </svg>
-                      </div>
-                      <div class="content__el-address content__el-time">
-                        <div>
-                          sakhamuseum@mail.ru
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="l-map__main-frame">
-            <iframe 
-              frameborder="no" 
-              width="100%" 
-              height="100%" 
-              src="https://widgets.2gis.com/widget?type=firmsonmap&amp;options=%7B%22pos%22%3A%7B%22lat%22%3A62.031594%2C%22lon%22%3A129.718155%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22yakutsk%22%7D%2C%22org%22%3A%227037402698774305%22%7D"
-              >
-            </iframe>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 	</main>
 	<style>
   * {
@@ -1616,6 +1214,61 @@
 
 
 
+  <style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-slide {
+        width: 60%;
+      }
+
+      .swiper-slide:nth-child(2n) {
+        width: 40%;
+      }
+
+      .swiper-slide:nth-child(3n) {
+        width: 20%;
+      }
+  </style>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>

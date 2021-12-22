@@ -18,7 +18,9 @@
     padding: 0 15px;
   }
 }
-
+.l-sm-container {
+	padding: 0 140px;
+}
 .flex {
 	display: flex;
 	align-items: flex-start;
@@ -84,12 +86,4 @@ h6 {
 	font-family: PT Serif;
 	font-style: normal;
 	font-weight: normal;
-}
-
-a {
-	color: #fff;
-	text-decoration: none;
-	&:hover {
-		color: #fff;
-	}
 }
