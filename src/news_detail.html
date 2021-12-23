@@ -32,7 +32,9 @@
             </div>
             <div class="l-layout__wrapper flex --dir-col l-detail-layout">
               <div class="l-detail__main-img">
-                <img src="https://via.placeholder.com/1000" alt="">
+                <a href="#" data-fancybox="single" data-src="https://lipsum.app/id/1/800x600">
+                  <img src="https://via.placeholder.com/1000" alt="">
+                </a>
               </div>
               <div class="l-detail__text-container">
                 <div class="l-detail__text">
@@ -183,32 +185,14 @@ http://www.sakhamuseum.ru/news/vremennoye-zakrytiy...
 Просим не забывать о временных правилах для посещения музея и необходимости предъявить QR-код о вакцинации от COVID-19 вместе с документом, подтверждающим личность. Ознакомиться с временными правилами можно по ссылке: http://www.sakhamuseum.ru/news/vremennyye-pravila-...
                 </div>  
               </div>
-
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://via.placeholder.com/293" alt="">
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://via.placeholder.com/590" alt="">
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://via.placeholder.com/350" alt="">
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://via.placeholder.com/630" alt="">
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('components/page-blocks/_slider.html')
+      <div class="l-container">
+       <div class="l-layout-container flex --dir-col">
+        <div class="l-sm-container">
 
               <div class="l-detail__repost">
                 <div class="l-detail__repost-socials">
@@ -217,32 +201,32 @@ http://www.sakhamuseum.ru/news/vremennoye-zakrytiy...
                   </span>
                   <a href="#">
                     <svg class="social-link">
-                      <use xlink:href="img/sprite.svg#css--facebook"></use>
+                      <use xlink:href="img/sprite.svg#css--fb-send"></use>
                     </svg>
                   </a>
                   <a href="#">
                     <svg class="social-link">
-                      <use xlink:href="img/sprite.svg#css--telegram"></use>
+                      <use xlink:href="img/sprite.svg#css--tg-send"></use>
                     </svg>
                   </a>
                   <a href="#">
                     <svg class="social-link">
-                      <use xlink:href="img/sprite.svg#css--twitter"></use>
+                      <use xlink:href="img/sprite.svg#css--tw-send"></use>
                     </svg>
                   </a>
                   <a href="#">
                     <svg class="social-link">
-                      <use xlink:href="img/sprite.svg#css--vk"></use>
+                      <use xlink:href="img/sprite.svg#css--vk-send"></use>
                     </svg>
                   </a>
                   <a href="#">
                     <svg class="social-link">
-                      <use xlink:href="img/sprite.svg#css--whatsapp"></use>
+                      <use xlink:href="img/sprite.svg#css--wa-send"></use>
                     </svg>
                   </a>
                   <a href="#">
                     <svg class="social-link">
-                      <use xlink:href="img/sprite.svg#css--youtube"></use>
+                      <use xlink:href="img/sprite.svg#css--yt-send"></use>
                     </svg>
                   </a>
                 </div>
@@ -253,7 +237,7 @@ http://www.sakhamuseum.ru/news/vremennoye-zakrytiy...
                 </div>
               </div>
             </div>
-          </div>
+          
           <div class="l-news-list">
             <div class="l-title">
               <h1>Читайте также</h1>
@@ -324,61 +308,6 @@ http://www.sakhamuseum.ru/news/vremennoye-zakrytiy...
 	</main>
 	@@include('components/page-blocks/_footer.html')
 	@@include('components/page-blocks/_scripts.html')
-  <style>
-    .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .swiper-slide {
-        width: 60%;
-      }
-
-      .swiper-slide:nth-child(2n) {
-        width: 40%;
-      }
-
-      .swiper-slide:nth-child(3n) {
-        width: 20%;
-      }
-  </style>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
 </body>
 
 </html>

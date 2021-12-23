@@ -17,6 +17,18 @@
     padding: 0 15px;
   }
 }
+.l-title-detail {
+	h1 {
+		font-size: 53px;
+		line-height: 70px;
+		text-transform: uppercase;
+    color: #FFFFFF;
+    @media screen and (max-width: 630px) {
+      font-size: 28px;
+      line-height: 37px;
+    }
+	}
+}
 .l-sm-container {
 	padding: 0 140px;
 }
