@@ -1,0 +1,99 @@
+/*date picker*/
+
+.l-buy__ticket-v-form {
+  margin-top: 40px;
+}
+.v-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.v-left {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+}
+.v-calendar {
+  width: 100%; 
+}
+.v-calendar__header {
+  width: 100%;
+  height: 90px;
+  background: #1738A0;
+  border-radius: 10px 10px 0px 0px;
+  padding: 40px 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.v-calendar__header-left {
+  display: flex;
+  align-items: center;
+}
+.v-pick_date {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+  }
+}
+.v-pick_date-icon {
+  margin-right: 10px;
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+  }
+}
+.v-reset_date {
+  margin-left: 80px;
+  a {
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #FFFFFF;
+    }
+  }
+}
+.v-calendar__nav {
+  display: flex;
+  svg {
+    width: 12px;
+    height: 22px;
+    margin-top: 6px;
+  }
+}
+.v-calendar__nav-back {
+  margin-right: 20px;
+  svg {
+    transform: rotate(180deg);
+  }
+}
+.v-calendar__nav-next {
+  margin-left: 20px;
+}
+
+/*time picker*/
+
+.v-time__picker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+.v-time__picker-title {
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #04091A;
+}

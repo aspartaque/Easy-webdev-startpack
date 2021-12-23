@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Easy-webdev-startpack v3.0",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<main class="main">
+		<section class="l-layout">
+      <div class="l-container">
+        <div class="l-layout-container flex --dir-col">
+          <div class="l-breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Здания и часы работы </a>
+              </li>
+            </ul>
+          </div>
+          <div class="l-title">
+            <h1>ЗДания и часы работы</h1>
+          </div>
+          <div class="l-map__wrapper flex --dir-col">
+            <div class="l-events__filter">
+              <ul class="" data-tabs id="example-tabs">
+                <li class="filter-title">Филиалы:</li>
+                <li class="tabs-title is-active">
+                  <a href="#panel1" aria-selected="false" >#В Якутске</a>
+                </li>
+                <li class="tabs-title">
+                  <a href="#panel2">#В Районах</a>
+                </li>
+              </ul>
+            </div>
+            <div class="l-map__main">
+              <div class="l-map__main-nav tabs-content" data-tabs-content="example-tabs">
+                <div class="tabs-panel is-active" id="panel1">
+                  <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item l-map__main-li" data-accordion-item>
+                      <a href="#" class="accordion-title">
+                        <div>
+                          <svg class="img location-icon">
+                            <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Национальный художественный музей Республики Саха (Якутия)
+                        </span>
+                      </a>
+                      <div class="accordion-content l-map__main-content" data-tab-content>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--location-map"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              Кирова 9, 3этаж
+                            </div>
+                            <div>
+                              <span>
+                                Октябрьский округ, Якутск, 677018
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--time"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              СР <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ЧТ <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ПТ - ВС  <span>12:00 - 20:00</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--phone"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              +7 (4112) 33-52079 <span>касса</span>
+                            </div>
+                            <div>
+                              +7 (4112) 33-52079 <span>приемная</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              sakhamuseum@mail.ru
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion-item l-map__main-li" data-accordion-item>
+                      <a href="#" class="accordion-title">
+                        <div>
+                          <svg class="img location-icon">
+                            <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Галерея зарубежного искусства им. М.Ф. Габышева
+                        </span>
+                      </a>
+                      <div class="accordion-content l-map__main-content" data-tab-content>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--location-map"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              Кирова 9, 3этаж
+                            </div>
+                            <div>
+                              <span>
+                                Октябрьский округ, Якутск, 677018
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--time"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              СР <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ЧТ <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ПТ - ВС  <span>12:00 - 20:00</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--phone"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              +7 (4112) 33-52079 <span>касса</span>
+                            </div>
+                            <div>
+                              +7 (4112) 33-52079 <span>приемная</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              sakhamuseum@mail.ru
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion-item l-map__main-li" data-accordion-item>
+                      <a href="#" class="accordion-title">
+                        <div>
+                          <svg class="img location-icon">
+                            <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Картинная галерея академика Афанасия Осипова
+                        </span>
+                      </a>
+                      <div class="accordion-content l-map__main-content" data-tab-content>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--location-map"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              Кирова 9, 3этаж
+                            </div>
+                            <div>
+                              <span>
+                                Октябрьский округ, Якутск, 677018
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--time"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              СР <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ЧТ <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ПТ - ВС  <span>12:00 - 20:00</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--phone"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              +7 (4112) 33-52079 <span>касса</span>
+                            </div>
+                            <div>
+                              +7 (4112) 33-52079 <span>приемная</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              sakhamuseum@mail.ru
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tabs-panel" id="panel2">
+                  <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item l-map__main-li" data-accordion-item>
+                      <a href="#" class="accordion-title">
+                        <div>
+                          <svg class="img location-icon">
+                            <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          awdawха (Якутия)
+                        </span>
+                      </a>
+                      <div class="accordion-content l-map__main-content" data-tab-content>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--location-map"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              Кирова 9, 3этаж
+                            </div>
+                            <div>
+                              <span>
+                                Октябрьский округ, Якутск, 677018
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--time"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              СР <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ЧТ <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ПТ - ВС  <span>12:00 - 20:00</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--phone"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              +7 (4112) 33-52079 <span>касса</span>
+                            </div>
+                            <div>
+                              +7 (4112) 33-52079 <span>приемная</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              sakhamuseum@mail.ru
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion-item l-map__main-li" data-accordion-item>
+                      <a href="#" class="accordion-title">
+                        <div>
+                          <svg class="img location-icon">
+                            <use xlink:href="img/sprite.svg#css--show_more-lang"></use>
+                          </svg>
+                        </div>
+                        <span>
+                         d21d12d1я зарубежного иdawdawdawГабышева
+                        </span>
+                      </a>
+                      <div class="accordion-content l-map__main-content" data-tab-content>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--location-map"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              Кирова 9, 3этаж
+                            </div>
+                            <div>
+                              <span>
+                                Октябрьский округ, Якутск, 677018
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--time"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              СР <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ЧТ <span>12:00 - 20:00</span>
+                            </div>
+                            <div>
+                              ПТ - ВС  <span>12:00 - 20:00</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--phone"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address">
+                            <div>
+                              +7 (4112) 33-52079 <span>касса</span>
+                            </div>
+                            <div>
+                              +7 (4112) 33-52079 <span>приемная</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="l-map__main-content__el">
+                          <div class="content__el-icon">
+                            <svg class="img location_map-icon">
+                              <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
+                            </svg>
+                          </div>
+                          <div class="content__el-address content__el-time">
+                            <div>
+                              sakhamuseum@mail.ru
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l-map__main-frame">
+                <iframe 
+                  frameborder="no" 
+                  width="100%" 
+                  height="100%" 
+                  src="https://widgets.2gis.com/widget?type=firmsonmap&amp;options=%7B%22pos%22%3A%7B%22lat%22%3A62.031594%2C%22lon%22%3A129.718155%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22yakutsk%22%7D%2C%22org%22%3A%227037402698774305%22%7D"
+                  >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	</main>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

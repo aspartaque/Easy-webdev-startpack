@@ -27,11 +27,16 @@
 .accordion {
   background: #FFFDFB;
 }
+.l-header__top-mobile__menu {
+  .accordion-content {
+    background: #FFFDFB;
+  }
+}
 .accordion-content {
   padding: 0;
   border: none;
   margin-top: 20px;
-  background: #FFFDFB;
+  background: #FFFFFF;
   ul {
     margin: 0;
     li {

@@ -1,0 +1,135 @@
+.l-detail__slider {
+  width: 100%;
+}
+.swiper-slide {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  img {
+    padding: 0 15px;
+    height: 450px;
+  }
+  span.slider-title {
+    opacity: 0;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #04091A;
+    transition: .5s;
+  }
+  span.slider-desc {
+    opacity: 0;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 23px;
+    color: #04091A;
+    transition: .5s;
+  }
+  &.swiper-slide-active {
+    span {
+      opacity: 1;
+    }
+  }
+  a {
+    pointer-events: none;
+    &:hover {
+      color: transparent;
+      outline-offset: unset;
+    }
+    &:focus {
+      color: transparent;
+      outline-offset: unset;
+    }
+  }
+}
+.swiper-slide-active {
+  a {
+    pointer-events: all;
+  }
+}
+.under-slide-container {
+  max-width: 590px;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.swiper-pagination-fraction {
+  position: static;
+  width: auto;
+  color: #EC7708;
+  margin: 0 30px;
+}
+.swiper-pagination-current {
+  font-family: PTSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #EC7708;
+  position: relative;
+  margin-right: 10px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #EC7708;
+  }
+}
+.swiper-pagination-total {
+  font-family: PTSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #04091A;
+  position: relative;
+  margin-left: 10px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #04091A;
+  }
+}
+.swiper-button-next, .swiper-button-prev {
+  position: static;
+  margin: 0;
+}
+.swiper-button-prev {
+  width: auto;
+  height: auto;
+  &::after {
+    content: '';
+  }
+}
+.swiper-button-next {
+  width: auto;
+  height: auto;
+  &::after {
+    content: '';
+  }
+}
+.slider-prev-next-icons {
+  width: 9px;
+  height: 17px;
+  margin-top: 3px;
+}
+.slider-custom-navigation {
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
