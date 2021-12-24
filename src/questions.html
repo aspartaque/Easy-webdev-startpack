@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Easy-webdev-startpack v3.0",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<main class="main">
+		<section class="l-layout">
+      <div class="l-container">
+        <div class="l-layout-container flex --dir-col">
+          <div class="l-breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Здания и часы работы </a>
+              </li>
+            </ul>
+          </div>
+          <div class="l-title">
+            <h1>Часто задаваемые вопросы</h1>
+          </div>
+          <div class="l-questions">
+            <div class="l-questions__wrapper">
+              <div class="l-questions__wrapper-main">
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit in varius faucibus vel. Tellus viverra tempor semper.
+                    </a>
+                    <div class="accordion-content" data-tab-content>
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin neque malesuada massa blandit eu natoque dui in. Duis risus et viverra morbi pellentesque nisl, egestas nunc etiam. Consequat fermentum orci id ut pharetra malesuada amet neque, at. Amet diam erat vulputate scelerisque porttitor nec. Pharetra rhoncus diam lobortis magna tellus. Volutpat sit etiam cursus pharetra feugiat diam facilisi mattis aliquet. Auctor ligula blandit in et tincidunt placerat nisi. Nulla nibh interdum ut id faucibus porta gravida. Est feugiat sit adipiscing amet.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit in varius faucibus vel. Tellus viverra tempor semper.
+                    </a>
+                    <div class="accordion-content" data-tab-content>
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin neque malesuada massa blandit eu natoque dui in. Duis risus et viverra morbi pellentesque nisl, egestas nunc etiam. Consequat fermentum orci id ut pharetra malesuada amet neque, at. Amet diam erat vulputate scelerisque porttitor nec. Pharetra rhoncus diam lobortis magna tellus. Volutpat sit etiam cursus pharetra feugiat diam facilisi mattis aliquet. Auctor ligula blandit in et tincidunt placerat nisi. Nulla nibh interdum ut id faucibus porta gravida. Est feugiat sit adipiscing amet.
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="l-questions__wrapper-alert">
+                <div class="l-alert">
+                  <div class="l-alert__icon">
+                    <svg class="img">
+                      <use xlink:href="img/sprite.svg#css--carbon_warning"></use>
+                    </svg>
+                  </div>
+                  <div class="l-alert__warning">
+                    <span>
+                      Убедительно просим внимательноознакомиться с частозадаваемыми вопросами.Возможно, здесь вы найдете ответбыстрее, чем получите ответное письмо
+                    </span>
+                    <div class="">
+                      <a data-open="exampleModal1" class="btn-buyTickets-white">
+                        Задать вопрос
+                      </a>
+                      <div class="reveal" id="exampleModal1" data-reveal>
+                        <h1>Задать вопрос</h1>
+                        <form action="">
+                          <input type="text" placeholder="Имя*" required>
+                          <input type="text" placeholder="Фамилия*" required>
+                          <input type="text" placeholder="E–mail*" required>
+                          <input type="text" placeholder="Телефон">
+                          <textarea placeholder="Ваш вопрос*" required></textarea>
+                          <p>Нажимая на кнопку, я принимаю условия Политики конфиденциальности</p>
+                          <button type="submit">отправить</button>
+                        </form>
+                        <button class="close-button" data-close aria-label="Close reveal" type="button">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+	</main>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

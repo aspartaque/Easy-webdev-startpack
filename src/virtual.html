@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Easy-webdev-startpack v3.0",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<main class="main">
+		<section class="l-layout">
+      <div class="l-container">
+        <div class="flex --dir-col">
+          <div class="l-breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Здания и часы работы </a>
+              </li>
+            </ul>
+          </div>
+          <div class="l-title-big-blue">
+            <h1>виртуальные выставки</h1>
+          </div>
+          <div class="l-virtual">
+            <div class="l-virtual-descr">
+              Виртуальная выставка – это одна из форм информационно-библиотечного обслуживания пользователей, которая сочетает традиционный (книжный) и электронный способы предоставления информации.
+            </div>
+            <div class="l-news-list">
+              <div class="l-news__items-row">
+                <div class="l-news__item flex --dir-col">
+                  <div class="l-news__items-image">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/420/FFFF00/000000?Text=WebsiteBuilders.com" alt="">
+                    </a>
+                  </div>
+                  <div class="l-news__items-description flex --dir-col">
+                    <div class="l-news__items-description__date">
+                      <span>
+                        23 сентября 2021
+                      </span>
+                    </div>
+                    <div class="l-news__items-description__name">
+                      <span>
+                        В Национальном художественному музее РС(Я) прошла пресс-конференция по “Пушкинской карте”
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-news__item flex --dir-col">
+                  <div class="l-news__items-image">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/420/FFFF00/000000?Text=WebsiteBuilders.com" alt="">
+                    </a>
+                  </div>
+                  <div class="l-news__items-description flex --dir-col">
+                    <div class="l-news__items-description__date">
+                      <span>
+                        23 сентября 2021
+                      </span>
+                    </div>
+                    <div class="l-news__items-description__name">
+                      <span>
+                        Пушкинская карта в Национальном художественном музее Республики Саха (Якутия) 
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-news__item flex --dir-col">
+                  <div class="l-news__items-image">
+                    <a href="#">
+                      <img src="https://via.placeholder.com/420/FFFF00/000000?Text=WebsiteBuilders.com" alt="">
+                    </a>
+                  </div>
+                  <div class="l-news__items-description flex --dir-col">
+                    <div class="l-news__items-description__date">
+                      <span>
+                        23 сентября 2021
+                      </span>
+                    </div>
+                    <div class="l-news__items-description__name">
+                      <span>
+                        Видеорублика “Арт-погружение”: Иван Попов. Якутск конца XVII столетия
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="l-title-sm-blue">
+              <h1>Виртуальный тур</h1>
+            </div>
+            <div class="l-virtual__tour">
+              <div class="l-virtual__tour-descr">
+                <span>
+                  С каждым днем все большее число людей пользуются виртуальными турами по музеям.  Острая нехватка времени у современных людей делает 3д экскурсии по музею действительно востребованным продуктом, ведь посетить их можно, не выходя из дома или офиса с любого мобильного устройства или компьютера. Впрочем, для некоторых групп людей виртуальная экскурсия по музею – это единственная возможность посетить данную достопримечательности. Именно виртуальный компьютерный музей приоткрывает завесу тайны, позволяет понять, что ждет в залах культурного объекта, погрузится в атмосферу, узнать много нового.
+                </span>
+              </div>
+              <div class="l-virtual__tour-player">
+                <a href="#">
+                  <div class="l-virtual__tour-player-icon">
+                    <svg class="img">
+                      <use xlink:href="img/sprite.svg#css--virtual-play-icon"></use>
+                    </svg>
+                  </div>
+                  <img src="https://via.placeholder.com/860x460" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="l-title-sm-blue h1-not-margin">
+              <h1>Выставки на платформе</h1>
+              <h1 class="lowercase">Google Arts & Culture</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('components/page-blocks/_slider.html')
+      <div class="l-container">
+        <div class="flex --dir-col">
+          <div class="l-virtual__go-to-platform">
+            <a href="#">Перейти к платформе</a>
+          </div>
+        </div>
+      </div>
+    </section>
+	</main>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

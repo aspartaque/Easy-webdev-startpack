@@ -7,6 +7,15 @@
 .--svg__calendar-after::after {
     content:'';
 }
+.--svg__carbon_warning,.--svg__carbon_warning-before::before,.--svg__carbon_warning-after::after{
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2a14 14 0 100 28 14 14 0 000-28zm0 26a12 12 0 110-24 12 12 0 010 24z' fill='%23EC7708'/%3E%3Cpath d='M15 8h2v11h-2V8zM16 22a1.5 1.5 0 100 3 1.5 1.5 0 000-3z' fill='%23EC7708'/%3E%3C/svg%3E");
+}
+.--svg__carbon_warning-before::before {
+    content:'';
+}
+.--svg__carbon_warning-after::after {
+    content:'';
+}
 .--svg__email-sobaka,.--svg__email-sobaka-before::before,.--svg__email-sobaka-after::after{
     background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V10c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V10c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z' fill='%23EC7708'/%3E%3C/svg%3E");
 }
@@ -221,6 +230,15 @@
     content:'';
 }
 .--svg__twitter-after::after {
+    content:'';
+}
+.--svg__virtual-play-icon,.--svg__virtual-play-icon-before::before,.--svg__virtual-play-icon-after::after{
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='166' height='166' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M166 83a83.003 83.003 0 01-83 83A83.002 83.002 0 010 83a83 83 0 01166 0zM70.446 52.84a5.187 5.187 0 00-8.196 4.222v51.876a5.186 5.186 0 005.558 5.171 5.19 5.19 0 002.638-.949l36.313-25.937a5.19 5.19 0 000-8.445L70.446 52.84z' fill='%23fff' fill-opacity='.5'/%3E%3C/svg%3E");
+}
+.--svg__virtual-play-icon-before::before {
+    content:'';
+}
+.--svg__virtual-play-icon-after::after {
     content:'';
 }
 .--svg__vk-send,.--svg__vk-send-before::before,.--svg__vk-send-after::after{

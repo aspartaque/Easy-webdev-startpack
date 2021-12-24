@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Easy-webdev-startpack v3.0",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<main class="main">
+		<section class="l-layout">
+      <div class="l-container">
+        <div class="l-layout-container flex --dir-col">
+          <div class="l-breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Здания и часы работы </a>
+              </li>
+            </ul>
+          </div>
+          <div class="l-title">
+            <h1>Опросы</h1>
+          </div>
+          <div class="l-questions">
+            <div class="l-questions__wrapper">
+              <div class="l-questions__wrapper-main">
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit in varius faucibus vel. Tellus viverra tempor semper.
+                    </a>
+                    <div class="accordion-content" data-tab-content>
+                      <div class="l-opros-container">
+                        <div class="l-opros-title">Выберите ответ</div>
+                        <label class="l-opros-button">Да</label>
+                        <label class="l-opros-button">Нет</label>
+                        <div class="l-opros-title">Опишите кратко</div>
+                        <div class="l-opros-input-and-button">
+                          <input type="text" placeholder="Далее">
+                          <button class="l-opros-dalee">
+                            Далее
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit in varius faucibus vel. Tellus viverra tempor semper.
+                    </a>
+                    <div class="accordion-content" data-tab-content>
+                      <div class="l-opros-container">
+                        <div class="l-opros-title">Выберите ответ</div>
+                        <label class="l-opros-button">Да</label>
+                        <label class="l-opros-button">Нет</label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="l-opros-send-answers">
+                  <button class="l-opros-dalee">
+                    отправить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+	</main>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
