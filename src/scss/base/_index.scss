@@ -1109,6 +1109,7 @@ div.l-opros-title {
   margin-bottom: 20px;
   padding: 20px;
   background-repeat: no-repeat;
+  background-size: cover;
   a {
     height: 100%;
   }
@@ -1123,6 +1124,12 @@ div.l-opros-title {
       font-weight: normal;
       font-size: 16px;
       line-height: 21px;
+      color: #FFFFFF;
+    }
+  }
+  .l-news__items-description__name {
+    span {
+      color: #FFFFFF;
     }
   }
 }
@@ -1201,6 +1208,7 @@ div.l-opros-title {
   width: 100%;
   padding: 50px 50px 30px 50px;
   border: 1px solid #C4C4C4;
+  position: relative;
 }
 .l-publications__detail-slider {
   .swiper-slide {
@@ -1210,7 +1218,6 @@ div.l-opros-title {
     }
   }
   .swiper-thumbs {
-    margin-top: 30px;
     height: 135px;
     max-width: 465px;
     width: 100%;
@@ -1226,4 +1233,33 @@ div.l-opros-title {
       }
     }
   }
+  .l-publications__thumbs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .swiper {
+      margin: 0;
+    }
+  }
+  .swiper-button-prev::after {
+    content: 'prev'!important;
+    margin-right: 60px;
+    color: #8B8B8B;
+  }
+  .swiper-button-next::after {
+    content: 'next'!important;
+    margin-left: 60px;
+    color: #8B8B8B;
+  }
+}
+.l-publications__detail-description {
+  margin-top: 90px;
+}
+.l-publications__detail-description-text {
+  margin-top: 50px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: #04091A;
 }
