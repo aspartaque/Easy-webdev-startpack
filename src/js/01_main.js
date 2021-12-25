@@ -41,7 +41,6 @@ var swiper2 = new Swiper(".mySwiper2", {
 /*section virtual text open*/
 $('.l-virtual__descr-open-btn').click(function() {
   $('.l-virtual__descr-container').toggleClass('l-virtual__descr-container-open');
-  $('#virtual-detail-img').css('height', '100%');
   $('.l-virtual__descr-open-btn').text('СКРЫТЬ ТЕКСТ');
 });
 

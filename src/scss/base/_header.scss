@@ -189,6 +189,7 @@ $mainColor: #1738A0;
   width: 100%;
   height: 80px;
   background-color: #1738A0;
+  position: relative;
   .flex {
     height: 100%;
     align-items: center;
@@ -226,7 +227,7 @@ $mainColor: #1738A0;
   border: none;
   border-top: 1px solid #566EBB;
   flex-direction: row!important;
-  top: 180px;
+  top: 80px;
   left: 0;
 }
 .is-dropdown-submenu.js-dropdown-active {

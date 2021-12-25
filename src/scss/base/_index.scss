@@ -359,7 +359,7 @@ $mainColor: #132F85;
   }
   &__name {
     margin-top: 10px;
-    span {
+    a {
       font-weight: bold;
       font-size: 24px;
       line-height: 31px;
@@ -423,7 +423,7 @@ $mainColor: #132F85;
   flex-direction: column;
   margin-top: 20px;
   &-name {
-    span {
+    a {
       font-weight: bold;
       font-size: 24px;
       line-height: 31px;
@@ -622,9 +622,6 @@ $mainColor: #132F85;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  &:hover {
-    color: #EC7708;
-  }
 }
 .l-main_info-tickets {
   width: 33%;
@@ -1024,8 +1021,16 @@ div.l-opros-title {
   }
 }
 /*virtual detail*/
+.shadow {
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  height: 607px;
+  position: absolute;
+  top: 0;
+}
 .l-virtual__detail-wrapper {
   margin-top: 60px;
+  position: relative;
 }
 .l-virtual__descr-container {
   margin-top: 50px;
@@ -1128,7 +1133,7 @@ div.l-opros-title {
     }
   }
   .l-news__items-description__name {
-    span {
+    a {
       color: #FFFFFF;
     }
   }
@@ -1176,9 +1181,7 @@ div.l-opros-title {
   display: flex;
   justify-content: space-between;
 }
-.l-publications__detail-slider {
 
-}
 .l-publications__detail-information {
   ul {
     display: flex;
@@ -1262,4 +1265,46 @@ div.l-opros-title {
   font-size: 20px;
   line-height: 150%;
   color: #04091A;
+}
+/*bilets*/
+.l-bilets__info-wrapper {
+  display: flex;
+}
+.l-bilets__info-icon {
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+.l-bilets__info-row {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  a {
+    font-size: 20px;
+    line-height: 26px;
+    color: #EC7708;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #EC7708;
+    }
+  }
+}
+.l-bilets {
+  padding: 90px 0;
+  border-bottom: 1px solid #DBD7D3;
+  .l-title-sm-blue {
+    margin-bottom: 50px;
+  }
 }
