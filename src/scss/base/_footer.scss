@@ -47,12 +47,12 @@
     }
 }
 .footer-nav__column {
-    margin-right: 45px;
+    margin-right: 34px;
     &:last-child {
         margin-right: 0;
     }
     @media screen and (max-width: 1330px) {
-        margin-right: 40px;
+        margin-right: 30px;
     }
     @media screen and (max-width: 960px) {
         margin-right: 20px;
@@ -89,6 +89,9 @@
     }
     @media screen and (max-width: 1330px) {
         display: none;
+        &:first-child {
+            display: block;
+        }
     }
 }
 /*footer-feedback*/

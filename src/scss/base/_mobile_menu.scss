@@ -68,7 +68,7 @@
   height: auto;
   position: absolute;
   top: 100px;
-  left: -100%;
+  left: 0;
   background: #FFFDFB;
   border-top: 1px solid #DBD7D3;
   z-index: 2;
@@ -78,6 +78,12 @@
     padding: 20px 0 100px 0;
     top: 68px;
   }
+}
+.position-left {
+  transform: translateX(-100%);
+}
+.off-canvas.is-transition-overlap.is-open {
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.35);
 }
 .mobile-menu-active {
   left: 0;

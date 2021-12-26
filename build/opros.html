@@ -29,11 +29,13 @@
       <div class="l-header__top-flex l-container flex --just-space">
         <div class="l-header__top-mobile__menu">
   <div class="mobile__menu">
-    <div class="burger-line-top"></div>
-    <div class="burger-line-mid"></div>
-    <div class="burger-line-bot"></div>
+    <button type="button" class="m-header-menu-toggle" data-toggle="offCanvasLeftOverlap" aria-expanded="false" aria-controls="offCanvas">
+      <div class="burger-line-top"></div>
+      <div class="burger-line-mid"></div>
+      <div class="burger-line-bot"></div>
+    </button>
   </div>
-  <div class="mobile-menu__container ">
+  <div class="mobile-menu__container off-canvas position-left" id="offCanvasLeftOverlap" data-off-canvas data-transition="overlap">
     <div class="l-container">
       <div class="mobile-menu__container-button-impaired">
         <div class="l-impaired__button">
