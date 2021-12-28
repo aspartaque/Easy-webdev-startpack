@@ -210,3 +210,27 @@ textarea {
 	height: auto;
 	background: #FFFFFF;
 }
+
+/*button buy on card*/
+.card__header-sold {
+	a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background: #149B5A;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 12px 18px 10px 18px;
+    @media screen and (max-width: 1090px) {
+      padding: 8px 10px;
+    }
+    @media screen and (max-width: 630px) {
+      padding: 12px 18px 10px 18px;
+    }
+		&:hover {
+			cursor: not-allowed;
+			background: #149B5A;
+		}
+  }
+}
