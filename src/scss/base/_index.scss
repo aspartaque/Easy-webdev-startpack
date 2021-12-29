@@ -1536,3 +1536,13 @@ div.l-opros-title {
     color: #04091A;
   }
 }
+.l-events__content-rucovodstvo {
+  width: 100%;
+  margin-top: 90px;
+}
+.l-events__content-wraper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}

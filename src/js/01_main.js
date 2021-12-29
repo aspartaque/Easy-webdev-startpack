@@ -1,3 +1,5 @@
+
+
 $(document).ready(() => {
   $(document).foundation();
 });
@@ -45,7 +47,7 @@ $('.l-virtual__descr-open-btn').click(function() {
 
 new Vue({
   el: '#app',
-  data: {
-    selectedDate: null,
+  components: {
+    DraggableCal,
   }
 })
