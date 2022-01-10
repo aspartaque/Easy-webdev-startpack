@@ -28,6 +28,10 @@
 		line-height: 70px;
 		text-transform: uppercase;
     color: #132F85;
+		@media screen and (max-width: 960px) {
+			font-size: 48px;
+			line-height: 64px;
+    }
     @media screen and (max-width: 630px) {
       font-size: 28px;
       line-height: 37px;
@@ -75,6 +79,9 @@
 }
 .l-sm-container {
 	padding: 0 140px;
+	@media screen and (max-width: 960px) {
+		padding: 0;
+	}
 }
 .flex {
 	display: flex;

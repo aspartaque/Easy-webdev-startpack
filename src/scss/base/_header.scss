@@ -144,6 +144,19 @@ $mainColor: #1738A0;
   @media screen and (max-width: 630px) {
     display: none;
   }
+  .is-dropdown-submenu {
+    min-width: unset;
+  }
+  .is-dropdown-submenu-item {
+    &:hover {
+      background: #1738a0;
+      a {
+        span {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
 }
 .svg-show_more {
   width: 12px;

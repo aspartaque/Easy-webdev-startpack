@@ -9,6 +9,9 @@
   img {
     padding: 0 15px;
     height: 450px;
+    @media screen and (max-width: 425px) {
+      height: 320px;
+    }
   }
   span.slider-title {
     opacity: 0;
@@ -43,10 +46,17 @@
       outline-offset: unset;
     }
   }
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 }
 .swiper-slide-active {
   a {
     pointer-events: all;
+    @media screen and (max-width: 960px) {
+      position: relative;
+      margin: 0 auto;
+    }
   }
 }
 .under-slide-container {
@@ -132,4 +142,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.l-publications__detail-slider-frame {
+  .swiper-slide {
+    img {
+      padding: 0;
+    }
+  }
 }
