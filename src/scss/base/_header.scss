@@ -180,6 +180,32 @@ $mainColor: #1738A0;
     display: none;
   }
 }
+.off-canvas {
+  .l-service__links-buyTickets {
+    display: flex;
+    margin-right: 20px;
+    .btn-buyTickets:focus {
+      color: #FFFFFF;
+    }
+  }
+  .l-service__links-language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #1738a0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .l-mobile-menu__btns {
+    @media screen and (max-width: 425px) {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    display: none;
+  }
+}
 .btn-buyTickets {
   font-weight: bold;
   font-size: 14px;
@@ -282,5 +308,48 @@ li.is-active {
     line-height: 23px;
     text-transform: uppercase;
     color: #1738A0;
+  }
+}
+.reveal-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+.reveal-search {
+  max-width: 1440px;
+  padding: 0 70px!important;
+  width: 100%;
+  background: none!important;
+  border: none;
+}
+.reveal-search__container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  form {
+    width: 100%;
+    
+  }
+  button {
+    position: absolute;
+    display: flex;
+    height: 30px;
+    top: 17px;
+    right: 0;
+    svg {
+      position: absolute;
+      cursor: pointer;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+.reveal-search__input {
+  background: none!important;
+  color: #FFFFFF;
+  margin: 0!important;
+  border-bottom: 1px solid #d28737!important;
+  font-size: 32px!important;
+  &::placeholder {
+    color: #626262;
   }
 }
