@@ -21,6 +21,10 @@
     line-height: 31px;
     color: #04091A;
     transition: .5s;
+    @media screen and (max-width: 620px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
   span.slider-desc {
     opacity: 0;
@@ -29,6 +33,10 @@
     line-height: 23px;
     color: #04091A;
     transition: .5s;
+    @media screen and (max-width: 620px) {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
   &.swiper-slide-active {
     span {

@@ -28,8 +28,8 @@
     <div class="l-header__top">
       <div class="l-header__top-flex l-container flex --just-space">
         <div class="l-header__top-mobile__menu">
-  <div class="mobile__menu">
-    <button type="button" class="m-header-menu-toggle" data-toggle="offCanvasLeftOverlap" aria-expanded="false" aria-controls="offCanvas">
+  <div class="mobile__menu" data-toggle="offCanvasLeftOverlap" aria-expanded="false" aria-controls="offCanvas">
+    <button type="button" class="m-header-menu-toggle">
       <div class="burger-line-top"></div>
       <div class="burger-line-mid"></div>
       <div class="burger-line-bot"></div>
@@ -391,6 +391,9 @@
                       </button>
                     </form>
                   </div>
+                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
               </div>
               <div class="l-service__links-buyTickets">
@@ -709,7 +712,7 @@
                       <a data-open="exampleModal1" class="btn-buyTickets-white">
                         Задать вопрос
                       </a>
-                      <div class="reveal questions-reveal" id="exampleModal1" data-reveal>
+                      <div class="reveal" id="exampleModal1" data-reveal>
                         <h1>Задать вопрос</h1>
                         <form action="">
                           <input type="text" placeholder="Имя*" required>

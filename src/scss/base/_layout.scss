@@ -41,3 +41,8 @@
 .l-layout__wrapper {
   width: 100%;
 }
+.bx-breadcrumb-item {
+  span {
+    white-space: nowrap;
+  }
+}

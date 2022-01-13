@@ -1376,13 +1376,14 @@ div.l-opros-title {
 .l-publications__detail-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   @media screen and (max-width: 620px) {
     flex-direction: column;
   }
 }
 
 .l-publications__detail-information {
+  margin-left: 57px;
   ul {
     display: flex;
     flex-direction: column;
@@ -1408,6 +1409,9 @@ div.l-opros-title {
     font-weight: normal;
     font-size: 20px;
     line-height: 26px;
+  }
+  @media screen and (max-width: 620px) {
+    margin-left: 0;
   }
 }
 .l-publications__detail-slider-frame {

@@ -28,8 +28,8 @@
     <div class="l-header__top">
       <div class="l-header__top-flex l-container flex --just-space">
         <div class="l-header__top-mobile__menu">
-  <div class="mobile__menu">
-    <button type="button" class="m-header-menu-toggle" data-toggle="offCanvasLeftOverlap" aria-expanded="false" aria-controls="offCanvas">
+  <div class="mobile__menu" data-toggle="offCanvasLeftOverlap" aria-expanded="false" aria-controls="offCanvas">
+    <button type="button" class="m-header-menu-toggle">
       <div class="burger-line-top"></div>
       <div class="burger-line-mid"></div>
       <div class="burger-line-bot"></div>
@@ -391,6 +391,9 @@
                       </button>
                     </form>
                   </div>
+                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
               </div>
               <div class="l-service__links-buyTickets">
@@ -655,14 +658,14 @@
 		<section class="l-section l-video__banner">
   <div class="l-video__banner-container">
     <div class="l-video__banner-player">
-      <video
+      <!-- <video
         poster="MY_VIDEO_POSTER.jpg"
         autoplay
         muted
         loop
       >
         <source src="video/stock-video.mp4" type="video/mp4" />
-      </video>
+      </video> -->
     </div>
     <div class="l-video__banner-content">
       <div class="l-video__banner-content__title">

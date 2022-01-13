@@ -319,11 +319,23 @@ li.is-active {
   width: 100%;
   background: none!important;
   border: none;
+  @media screen and (max-width: 425px) {
+    padding: 0 30px!important;
+  }
+}
+button.close-button {
+  display: none;
+  @media screen and (max-width: 425px) {
+    display: block;
+  }
 }
 .reveal-search__container {
   display: flex;
   position: relative;
   align-items: center;
+  @media screen and (max-width: 425px) {
+    top: 20%!important;
+  }
   form {
     width: 100%;
     
