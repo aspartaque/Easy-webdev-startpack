@@ -48,7 +48,9 @@ $('.l-virtual__descr-open-btn').click(function() {
 
 new Vue({
   el: '#app',
-  components: {
-    DraggableCal,
-  }
+  data: () => ({
+    message: 'Hello Vue!',
+    sum: '',
+    prices: ['100', '300', '500', '1000']
+  })
 })

@@ -669,186 +669,71 @@
             </ul>
           </div>
           <div class="l-title-big-blue">
-            <h1>Руководство</h1>
+            <h1>сделать пожертвование</h1>
           </div>
-          <div class="l-rucovodstvo__wrapper">
-            <div class="l-rucovodstvo__main">
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Трегулова Зельфира Исмаилова 
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Генеральный директор
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Передерий Елена Алексеевна
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Заместитель генерального директора по экономике и финансам
-                    </span>
+          <div class="l-donate-container" id="app">
+            <form action="">
+              <div class="l-donate__wrapper">
+                <div class="l-donate__wrapper-column col-3">
+                  <div class="l-donate-sum">
+                    <input type="text" placeholder="Сумма пожертвования" v-model='sum' required>
+                    <div class="l-donate-sum__btns">
+                      <div class="sum-btn" 
+                        v-for='value in prices' 
+                        :key='value'
+                        @click='sum = value'
+                      >
+                        {{ value }}
+                      </div>
+                    </div>
+                    <div class="l-donate__alert">
+                      <div class="l-donate__alert-content">
+                        <div class="l-alert__icon">
+                          <svg class="img">
+                            <use xlink:href="img/sprite.svg#css--carbon_warning"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Сделанные вами пожертвования будут направлены на организации выставок, создание просветительских программ, реставрацию произведений, а также на другие цели в рамках уставной деятельности
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Борисова Елена Дмитриевна
-                    </span>
+                <div class="l-donate__wrapper-column col-3">
+                  <div class="l-donate-form">
+                    <input type="text" name="name" placeholder="Имя Фамилия*" required> 
+                    <input type="text" name="email" placeholder="E-mail*" required>
+                    <input type="text" name="tel" placeholder="Телефон">
+                    <select name="" id="">
+                      <option value="" disabled selected>Категория пожертвования</option>
+                      <option value="">Экспонаты</option>
+                      <option value="">Выставки</option>
+                      <option value="">Картинная галерея</option>
+                    </select>
+                    <div class="l-donate-form-checkbox">
+                      <input type="checkbox" name="checkbox" id="check" required/>
+                      <span>Совершая пожертвование и потверждая транзакцию, вы присоединяетесь к <b>публичному договору</b>пожертвования и предоставляете свое согласие с <b>Политикой конфиденциальности</b></span>
+                    </div>
+                    <div class="l-donate-form-checkbox">
+                      <input type="checkbox" name="checkbox" id="check"/>
+                      <span>Получать информацию от музея по e-mail</span>
+                    </div>
+                    <button class="l-donate-form-button" type="submit">пожертвовать</button>
                   </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Директор филиала Национального Государственного музея Республики Саха (Якутия)
-                    </span>
-                  </div>
                 </div>
-              </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
+                <div class="l-donate__wrapper-column col-3">
+                  <div class="l-donate__info">
+                    <div>
+                      <img src="img/visa.png" alt="">
+                    </div>
                     <span>
-                      Трегулова Зельфира Исмаилова 
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Генеральный директор
+                      Безопасность платежей обеспечивается с помощью Банка-эквайера (ГАЗПРОМБАНК (Акционерное Общество)), функционирующего на основе современных протоколов и технологий, разработанных платежными системами МИР, Visa International и Mastercard Worldwide (3D-Secure: Verified by VISA, Mastercard SecureCode, MirAccept). Обработка полученных конфиденциальных данных Держателя карты производится в процессинговом центре Банка, сертифицированного по стандарту PCI DSS. Безопасность передаваемой информации обеспечивается с помощью современных протоколов обеспечения безопасности в сети Интернет.
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Трегулова Зельфира Исмаилова 
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Генеральный директор
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Передерий Елена Алексеевна
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Заместитель генерального директора по экономике и финансам
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Борисова Елена Дмитриевна
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Директор филиала Национального Государственного музея Республики Саха (Якутия)
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="l-rucovodstvo__item">
-                <div class="l-rucovodstvo__item-img">
-                  <img src="https://via.placeholder.com/180x180" alt="">
-                </div>
-                <div class="l-rucovodstvo__item-descr">
-                  <div class="l-rucovodstvo__item-descr-name">
-                    <span>
-                      Трегулова Зельфира Исмаилова 
-                    </span>
-                  </div>
-                  <div class="l-rucovodstvo__item-descr-pos">
-                    <span>
-                      Генеральный директор
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="l-rucovodstvo__info">
-              <div class="l-rucovodstvo__item-descr-name">
-                <span>
-                  Контакты
-                </span>
-              </div>
-              <div class="l-contacts__main-info">
-                <div class="l-contacts__main-info-icon">
-                  <svg class="img location_map-icon">
-                    <use xlink:href="img/sprite.svg#css--phone"></use>
-                  </svg>
-                </div>
-                <div class="l-contacts__main-info-wrapper">
-                  <a href="#">
-                    +7 (4112) 33-52079
-                  </a>
-                  <a href="#">
-                    +7 (4112) 33-52079
-                  </a>
-                </div>
-              </div>
-              <div class="l-contacts__main-email">
-                <div class="l-contacts__main-info-icon">
-                  <svg class="img location_map-icon">
-                    <use xlink:href="img/sprite.svg#css--email-sobaka"></use>
-                  </svg>
-                </div>
-                <div class="l-contacts__main-info-wrapper">
-                  <a href="#">
-                    sakhamuseum@mail.ru
-                  </a>
-                </div>
-              </div>
-              <div class="l-rucovodstvo__info-btn">
-                <a href="#">
-                  Написать директору
-                </a>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

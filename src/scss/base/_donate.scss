@@ -1,0 +1,107 @@
+.l-donate-container {
+  width: 100%;
+}
+.l-donate__wrapper {
+  width: 100%;
+  display: flex;
+  @media screen and (max-width: 960px) {
+    height: 68px;
+  }
+}
+
+:root {
+  --columns-count: 3;
+}
+.col-3 {
+  width: calc(100% / var(--columns-count) * 3);
+}
+.l-donate-sum__btns {
+  display: flex;
+}
+.sum-btn {
+  padding: 14px 20px;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  margin-right: 10px;
+  transition: .3s;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background: #EC7708;
+    color: #FFFFFF;
+    border-color: #EC7708;
+  }
+  &:active {
+    background-color: #EC7708;
+  }
+}
+.l-donate__alert {
+  margin-top: 40px;
+}
+.l-donate__alert-content {
+  display: flex;
+  span {
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #626262;
+  }
+}
+.l-donate-form {
+  margin-left: 20px;
+  input {
+    margin-bottom: 30px;
+  }
+  select {
+    padding-left: 0;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.l-donate-form-checkbox {
+  margin-top: 32px;
+  display: flex;
+  input {
+    margin: 2px 0 0 0;
+  }
+  span {
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #6D85CD;
+  }
+  &:last-child {
+    margin-top: 20px;
+  }
+}
+.l-donate-form-button {
+  padding: 17px 25px 15px 25px;
+  background: #EC7708;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 40px;
+  &:hover {
+    background: #f79131;
+  }
+}
+.l-donate__info {
+  margin-left: 80px;
+  span {
+    font-size: 14px;
+    line-height: 140%;
+    color: #626262;
+  }
+}
