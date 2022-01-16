@@ -5,15 +5,30 @@
   width: 100%;
   display: flex;
   @media screen and (max-width: 960px) {
-    height: 68px;
-  }
+    flex-wrap: wrap;
+  } 
 }
 
 :root {
   --columns-count: 3;
+  --columns-count-2: 2;
 }
 .col-3 {
   width: calc(100% / var(--columns-count) * 3);
+  @media screen and (max-width: 960px) {
+    width: 50%;
+    &:last-child {
+      width: 100%;
+      margin-top: 80px;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    margin-bottom: 70px;
+    &:last-child {
+      margin-top: 0;
+    }
+  }
 }
 .l-donate-sum__btns {
   display: flex;
@@ -39,6 +54,10 @@
   &:active {
     background-color: #EC7708;
   }
+  @media screen and (max-width: 425px) {
+    padding: 12px 16px;
+    margin-right: 5px;
+  }
 }
 .l-donate__alert {
   margin-top: 40px;
@@ -63,6 +82,9 @@
     border-bottom: 1px solid #C4C4C4;
     font-size: 20px;
     line-height: 26px;
+  }
+  @media screen and (max-width: 760px) {
+    margin-left: 0;
   }
 }
 .l-donate-form-checkbox {
@@ -103,5 +125,8 @@
     font-size: 14px;
     line-height: 140%;
     color: #626262;
+  }
+  @media screen and (max-width: 960px) {
+    margin-left: 0;
   }
 }

@@ -1,5 +1,3 @@
-
-
 $(document).ready(() => {
   $(document).foundation();
 });
@@ -46,11 +44,31 @@ $('.l-virtual__descr-open-btn').click(function() {
   $('.l-virtual__descr-open-btn').text('СКРЫТЬ ТЕКСТ');
 });
 
+Vue.component("vue-horizontal-calendar", {
+  el: '#app',
+  data: () => ({
+    choosedDay2: {
+      dateFormat: "",
+      year: "",
+      month: "",
+      date: "",
+      day: "",
+      timestamp: ""
+    },
+  }),
+  components: {
+    VueHorizontalCalendar,
+  },
+  methods: {
+    dateChange2(day) {
+      this.choosedDay2 = day;
+    },
+  }
+});
 new Vue({
   el: '#app',
   data: () => ({
-    message: 'Hello Vue!',
     sum: '',
-    prices: ['100', '300', '500', '1000']
-  })
-})
+    prices: ['100', '300', '500', '1000'],
+  }),
+});

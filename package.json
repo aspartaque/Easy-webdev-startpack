@@ -41,7 +41,8 @@
     "imagemin-pngquant": "^9.0.2",
     "require-dir": "^1.2.0",
     "video.js": "^7.17.0",
-    "vinyl-ftp": "^0.6.1"
+    "vinyl-ftp": "^0.6.1",
+    "vue-horizontal-calendar": "^1.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
