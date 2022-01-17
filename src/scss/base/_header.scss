@@ -283,7 +283,7 @@ $mainColor: #1738A0;
   width: 100%;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(4, 290px);
+  grid-template-columns: repeat(4, 1fr);
 }
 .l-header__inner-nav {
   .dropdown-menu-custom {
