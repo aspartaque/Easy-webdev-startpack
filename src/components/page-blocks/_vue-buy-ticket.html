@@ -1,4 +1,4 @@
-<div class="l-buy__ticket-v-form">
+<div class="l-buy__ticket-v-form" id='app'>
   <div class="v-wrapper">
     <div class="v-left">
       <div class="v-calendar">
@@ -33,19 +33,93 @@
             </div>
           </div>
         </div>
-        <div id='app'>
-         
-          <vue-horizontal-calendar choosedDate="2019/12/01" v-on:change="dateChange2"></vue-horizontal-calendar>
+        <div >
+          //calendar
         </div>
       </div>
       <div class="v-time__picker">
         <div class="v-time__picker-title">
           Выберите время
         </div>
+        <div class="v-time__picker-list">
+          <div 
+            class="v-time__pricker-btn" 
+            v-for='(hour, index) in hours' 
+            :key='index' 
+            @click='addTime(hour)'
+          >
+            <a>
+              {{ hour }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="v-type__ticket">
+        <div class="v-type__ticket-header">
+          <div class="v-type__ticket-title">
+            ТИП БИЛЕТА
+          </div>
+          <div class="v-type__ticket-right">
+            <div class="v-type__ticket-title">
+              СТОИМОСТЬ
+            </div>
+            <div class="v-type__ticket-title">
+              КОЛИЧЕСТВО
+            </div>
+          </div>
+        </div>
+        <div class="v-type__ticket-content">
+          <ul>
+            <li v-for="(item, index) in ticket" :key="index">
+              <div class="v-type__ticket-name">{{ item.name }}</div>
+              <div class="v-type__ticket-right">
+                <div class="v-type__ticket-price">{{ item.price }} руб</div>
+                <div class="v-type__ticket-count">
+                  <a @click="deleteTicket(index)" class="v-type__ticket-minus-plus__btn">-</a>
+                  <span>{{ item.quantity }}</span>
+                  <a @click="addTicket(index)" class="v-type__ticket-minus-plus__btn">+</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="v-right">
-
+      <div class="v-right__check">
+        <div class="v-right__check-info">
+          <ul>
+            <li>
+              Дата
+              <span>
+                29 декабря 2021
+              </span>
+            </li>
+            <li>
+              Время
+              <span v-for="addedItem in cart" :key="index">
+                {{ cart.time }}
+              </span>
+            </li>
+            <li>
+              Адрес
+              <span>
+                Национальный музей РС(Я)Кирова 9, 3 этаж
+              </span>
+            </li>
+            <li v-if="ticketActive" v-for="addedItem in cart" :key="index">
+              {{ addedItem.name }}
+              <span>
+                {{ addedItem.quantity }} x {{ addedItem.price }}
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div v-if="ticketActive" class="v-right__check-total">
+          Итого: <span>{{ total }} руб</span>
+        </div>
+      </div>
+      <a href="#" class="v-right__check-btn">Оформить заказ</a>
     </div>
   </div>
 </div>
