@@ -76,10 +76,7 @@ var app = new Vue({
   }),
   methods: {
     addTime(value) {
-      this.cartTime = value
-      // this.cartTime.push(
-      //   this.hours[idx]
-      // )
+      this.cartTime = value;
       console.log(this.cartTime);
     },
     addTicket(idx) {

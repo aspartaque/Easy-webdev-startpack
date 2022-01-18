@@ -721,14 +721,12 @@
         </div>
         <div class="v-time__picker-list">
           <div 
-            class="v-time__pricker-btn" 
+            class="v-time__pricker-btn"
             v-for='(hour, index) in hours' 
             :key='index' 
             @click='addTime(hour)'
           >
-            <a>
-              {{ hour }}
-            </a>
+            {{ hour }}
           </div>
         </div>
       </div>

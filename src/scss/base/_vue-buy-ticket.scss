@@ -105,7 +105,7 @@
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 20px;
   margin-top: 30px;
-  a {
+  .v-time__pricker-btn {
     display: block;
     border: 1px solid #000000;
     border-radius: 10px;
@@ -114,7 +114,13 @@
     font-size: 20px;
     line-height: 26px;
     color: #000000;
+    cursor: pointer;
     &:hover {
+      background: #EC7708;
+      color: #FFFFFF;
+      border-color: #EC7708;
+    }
+    &:checked {
       background: #EC7708;
       color: #FFFFFF;
       border-color: #EC7708;
