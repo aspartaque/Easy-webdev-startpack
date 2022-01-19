@@ -96,7 +96,7 @@
             <li>
               Время
               <span v-for="addedItem in cart" :key="index">
-                {{ cart.time }}
+                {{ addedItem.time }}
               </span>
             </li>
             <li>
@@ -114,7 +114,7 @@
           </ul>
         </div>
         <div v-if="ticketActive" class="v-right__check-total">
-          Итого: <span>{{ total }} руб</span>
+          Итого: <span>{{ GetTotal }} руб</span>
         </div>
       </div>
       <a href="#" class="v-right__check-btn">Оформить заказ</a>

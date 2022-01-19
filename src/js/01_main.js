@@ -54,7 +54,8 @@ var app = new Vue({
   data: () => ({
     //Страница Сделать пожертвование
     prices: ['100', '300', '500', '1000'],
-    //Страница Оформление заказ
+    //Страница Оформление заказа
+    date: '', //тут данные с календаря
     time: 'Выберите время',
     hours: ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
     cartTime: null,
@@ -76,7 +77,7 @@ var app = new Vue({
     ],
     ticketQuantityTotal: '',
     ticketActive: false,
-    total: null,
+    // total: null,
     cart: [],
   }),
   methods: {
@@ -91,18 +92,14 @@ var app = new Vue({
           name: this.ticket[idx].name,
           price: this.ticket[idx].price,
           quantity: this.ticket[idx].quantity,
-          time: this.cartTime,
-          totalPrice: this.price * this.quantity
+          time: this.cartTime, 
         }
         this.cart.push (data)
-        // this.cart.push ({
-        //   time: this.cartTime[idx]
-        // })
       }
       this.ticketActive = true;
       this.ticketQuantityTotal = this.cart[idx].quantity += 1;
       this.ticketQuantityTotal = this.ticket[idx].quantity += 1;
-      this.total = this.cart[idx].price * this.cart[idx].quantity
+      // this.total = this.cart.price * this.cart.quantity
       console.log(this.cart);
     },
     deleteTicket(idx) {
@@ -110,9 +107,18 @@ var app = new Vue({
         this.ticketActive = false;
       } 
       if (this.ticketQuantityTotal > 0) {
+        this.ticketQuantityTotal = this.cart[idx].quantity -= 1;
         this.ticketQuantityTotal = this.ticket[idx].quantity -= 1;
-        this.total = this.cart[idx].price * this.cart[idx].quantity
+        // this.total = this.cart[idx].price * this.cart[idx].quantity
       }
+    },
+  },
+  computed: {
+    GetTotal() {
+      let i = 0;
+      i += this.cart.price * this.cart.quantity;
+      
+      return i;
     },
   }
 });
