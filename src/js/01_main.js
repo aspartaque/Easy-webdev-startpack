@@ -43,6 +43,11 @@ $('.l-virtual__descr-open-btn').click(function() {
   $('.l-events__detail-image').css('background-size', '100%');
   $('.l-virtual__descr-open-btn').text('СКРЫТЬ ТЕКСТ');
 });
+/*section collections text open*/
+$('.open-text').click(function() {
+  $('.l-collections-small-container').toggleClass('opened-text');
+  $('.open-text').text('Свернуть');
+});
 
 var app = new Vue({
   el: '#app',

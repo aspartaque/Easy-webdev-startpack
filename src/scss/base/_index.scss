@@ -401,6 +401,20 @@ $mainColor: #132F85;
     }
   }
 }
+.l-collections-large-text {
+  font-size: 20px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.l-collections-small-container {
+  overflow: hidden;
+  // overflow-y: scroll;
+  max-height: 180px;
+}
+.opened-text {
+  max-height: none;
+}
 .l-collections__item {
   max-width: 420px;
   margin-bottom: 20px;

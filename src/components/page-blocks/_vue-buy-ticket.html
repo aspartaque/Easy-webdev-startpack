@@ -69,14 +69,14 @@
         <div class="v-type__ticket-content">
           <ul>
             <li v-for="(item, index) in ticket" :key="index">
-              <div class="v-type__ticket-name">{{ item.name }}</div>
-              <div class="v-type__ticket-right">
+              <div class="v-type__ticket-left">
+                <div class="v-type__ticket-name">{{ item.name }}</div>
                 <div class="v-type__ticket-price">{{ item.price }} руб</div>
-                <div class="v-type__ticket-count">
-                  <a @click="deleteTicket(index)" class="v-type__ticket-minus-plus__btn">-</a>
-                  <span>{{ item.quantity }}</span>
-                  <a @click="addTicket(index)" class="v-type__ticket-minus-plus__btn">+</a>
-                </div>
+              </div>
+              <div class="v-type__ticket-count">
+                <a @click="deleteTicket(index)" class="v-type__ticket-minus-plus__btn">-</a>
+                <span>{{ item.quantity }}</span>
+                <a @click="addTicket(index)" class="v-type__ticket-minus-plus__btn">+</a>
               </div>
             </li>
           </ul>
