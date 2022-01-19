@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="v-type__ticket">
+      <div class="v-type__ticket" v-show="pickTicket">
         <div class="v-type__ticket-header">
           <div class="v-type__ticket-title">
             ТИП БИЛЕТА
@@ -68,7 +68,7 @@
         </div>
         <div class="v-type__ticket-content">
           <ul>
-            <li v-for="(item, index) in ticket" :key="index">
+            <li v-for="(item, index) in ticket" :key="item.id">
               <div class="v-type__ticket-left">
                 <div class="v-type__ticket-name">{{ item.name }}</div>
                 <div class="v-type__ticket-price">{{ item.price }} руб</div>
@@ -88,6 +88,12 @@
         <div class="v-right__check-info">
           <ul>
             <li>
+              Адрес
+              <span>
+                Национальный музей РС(Я)Кирова 9, 3 этаж
+              </span>
+            </li>
+            <li>
               Дата
               <span>
                 29 декабря 2021
@@ -95,26 +101,20 @@
             </li>
             <li>
               Время
-              <span v-for="addedItem in cart" :key="index">
-                {{ addedItem.time }}
+              <span v-for="(item, index) in cart" :key="item.id">
+                {{ item.time }}
               </span>
             </li>
-            <li>
-              Адрес
+            <li v-for="(item, index) in cart" :key="item.id" v-if="ticketActive">
+              {{ item.name }}
               <span>
-                Национальный музей РС(Я)Кирова 9, 3 этаж
-              </span>
-            </li>
-            <li v-if="ticketActive" v-for="addedItem in cart" :key="index">
-              {{ addedItem.name }}
-              <span>
-                {{ addedItem.quantity }} x {{ addedItem.price }}
+                {{ item.quantity }} x {{ item.price }}
               </span>
             </li>
           </ul>
         </div>
         <div v-if="ticketActive" class="v-right__check-total">
-          Итого: <span>{{ GetTotal }} руб</span>
+          Итого: <span>{{ cartTotalAmount }} руб</span>
         </div>
       </div>
       <a href="#" class="v-right__check-btn">Оформить заказ</a>
