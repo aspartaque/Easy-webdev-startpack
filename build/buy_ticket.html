@@ -726,6 +726,7 @@
             v-for='(hour, index) in hours' 
             :key='index' 
             @click='addTime(hour)'
+            v-bind:class="{ active: isActive }"
           >
             {{ hour }}
           </div>
@@ -747,7 +748,7 @@
         </div>
         <div class="v-type__ticket-content">
           <ul>
-            <li v-for="(item, index) in ticket" :key="item.id">
+            <li v-for="(item, index) in ticket" :key="item.time">
               <div class="v-type__ticket-left">
                 <div class="v-type__ticket-name">{{ item.name }}</div>
                 <div class="v-type__ticket-price">{{ item.price }} руб</div>

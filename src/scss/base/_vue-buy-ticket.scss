@@ -382,8 +382,10 @@
     padding: 14px;
   }
 }
-a.timeactive {
-  background-color: #EC7708;
-  border-color: #EC7708;
-  color: #FFFFFF;
+.v-time__picker-list {
+  .active {
+    background-color: #EC7708;
+    border-color: #EC7708;
+    color: #FFFFFF;
+  }
 }

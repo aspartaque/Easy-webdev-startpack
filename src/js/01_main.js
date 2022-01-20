@@ -70,12 +70,21 @@ var app = new Vue({
         name: 'Взрослый',
         price: 100,
         quantity: 0,
+        timeStart: '10:00'
       },
       {
         id: 2,
         name: 'Детский',
         price: 50,
         quantity: 0,
+        timeStart: '10:00'
+      },
+      {
+        id: 3,
+        name: 'Группам',
+        price: 500,
+        quantity: 0,
+        timeStart: '15:00'
       }
     ],
     cart: {
@@ -93,11 +102,13 @@ var app = new Vue({
     cartQuantityTotal: '', // Общее кол-во билетов в корзине -net
     ticketActive: false, // показать ранее скрытый текст "Итого"
     pickTicket: false,
+    isActive: false,
   }),
   methods: {
     addTime(value) {
       this.cartTime = value;
       this.pickTicket = true;
+      this.isActive = !this.isActive;
     },
     addTicket(index) {
       this.cart.items.forEach(item => {
@@ -154,6 +165,9 @@ var app = new Vue({
         return totalQuantity;
       });
     },
+    // hourBtn() {
+    //   this.isActive = !this.isActive;
+    // },
   }
 });
 
