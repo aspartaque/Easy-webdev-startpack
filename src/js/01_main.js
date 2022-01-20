@@ -49,6 +49,13 @@ $('.open-text').click(function() {
   $('.open-text').text('Свернуть');
 });
 
+// Vue.component('vue-horizontal-calendar', {
+//   el: '#app',
+//   components: {
+//     VueHorizontalCalendar
+//   }
+// });
+
 var app = new Vue({
   el: '#app',
   data: () => ({
@@ -63,19 +70,27 @@ var app = new Vue({
         name: 'Взрослый',
         price: 100,
         quantity: 0,
-        time: ''
       },
       {
         id: 2,
         name: 'Детский',
         price: 50,
         quantity: 0,
-        time: ''
       }
     ],
-    cart: [],
+    cart: {
+      items: [
+        {
+          date: [],
+          time: [],
+          tickets: [],
+          totalCount: [],
+          totalAmount: [],
+        },
+      ],
+    },
     cartTime: null, // Выбранное время
-    cartQuantityTotal: '', // Общее кол-во билетов в корзине
+    cartQuantityTotal: '', // Общее кол-во билетов в корзине -net
     ticketActive: false, // показать ранее скрытый текст "Итого"
     pickTicket: false,
   }),
@@ -83,51 +98,62 @@ var app = new Vue({
     addTime(value) {
       this.cartTime = value;
       this.pickTicket = true;
-      console.log(this.cartTime);
     },
     addTicket(index) {
-      if (!this.cart[index]) {
-        let data = {
-          id: this.ticket[index].id,
-          name: this.ticket[index].name,
-          price: this.ticket[index].price,
-          quantity: this.ticket[index].quantity,
-          time: this.cartTime, 
+      this.cart.items.forEach(item => {
+        if (!item.tickets[index]) {
+          let data = {
+            id: this.ticket[index].id,
+            name: this.ticket[index].name,
+            price: this.ticket[index].price,
+            quantity: this.ticket[index].quantity,
+          }
+          item.time = this.cartTime;
+          item.tickets.push (data);
         }
-        this.cart.push (data)
-      }
-      this.cartQuantityTotal = this.cart[index].quantity += 1;
-      this.cartQuantityTotal = this.ticket[index].quantity += 1;
-      this.ticketActive = true;
-      console.log(this.cart);
+        this.cartQuantityTotal = item.tickets[index].quantity += 1;
+        this.cartQuantityTotal = this.ticket[index].quantity += 1;
+        if (item.tickets[index].quantity >= 1) {
+          this.ticketActive = true;
+        }
+        console.log(this.cart);
+      });
     },
     deleteTicket(index) {
-      if (this.cart[index].quantity > 0) {
-        this.cartQuantityTotal = this.cart[index].quantity -= 1;
-        this.cartQuantityTotal = this.ticket[index].quantity -= 1;
-      }
-      if (this.cart[index].quantity <= 0) {
-        this.ticketActive = false;
-      }
+      this.cart.items.forEach(item => {
+        if (item.tickets[index].quantity > 0) {
+          this.cartQuantityTotal = item.tickets[index].quantity -= 1;
+          this.cartQuantityTotal = this.ticket[index].quantity -= 1;
+        }
+        if (item.tickets[index].quantity < 1) {
+          this.ticketActive = false;
+          item.tickets.splice(index, 1);
+          // this.$delete(this.cart, index);
+        }
+      });
     },
   },
   computed: {
     cartTotalAmount() {
-      let total = 0;
-      total = this.cart.reduce( (acc, item) => {
-          return acc + (item.quantity * item.price)
-      }, 0)
-      return total;
+      this.cart.items.forEach(item => {
+        let total = 0;
+        total = item.tickets.reduce( (acc, itemTotal) => {
+            return acc + (itemTotal.quantity * itemTotal.price)
+        }, 0);
+        item.totalAmount = total;
+        return total;
+      });
     },
-    // statusHideEls() {
-    //   if (this.cart[index].quantity <= 1) {
-    //     this.ticketActive = false;
-    //   } else {
-    //     this.ticketActive = true;
-    //   };
-    //   console.log(this.cart);
-    //   return
-    // }
+    cartTotalCount() {
+      this.cart.items.forEach(item => {
+        let totalQuantity = 0;
+        totalQuantity = item.tickets.reduce( (acc, itemTotal) => {
+            return acc + (itemTotal.quantity)
+        }, 0);
+        item.totalCount = totalQuantity;
+        return totalQuantity;
+      });
+    },
   }
 });
 

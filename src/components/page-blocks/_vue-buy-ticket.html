@@ -34,6 +34,7 @@
           </div>
         </div>
         <div >
+          <VueHorizontalCalendar></VueHorizontalCalendar>
           //calendar
         </div>
       </div>
@@ -86,7 +87,7 @@
     <div class="v-right">
       <div class="v-right__check">
         <div class="v-right__check-info">
-          <ul>
+          <ul v-for="(item, index) in cart.items" :key="item.id">
             <li>
               Адрес
               <span>
@@ -101,11 +102,11 @@
             </li>
             <li>
               Время
-              <span v-for="(item, index) in cart" :key="item.id">
-                {{ item.time }}
+              <span v-for="(item, index) in item.tickets" :key="item.id">
+                {{ item.time }} 
               </span>
             </li>
-            <li v-for="(item, index) in cart" :key="item.id" v-if="ticketActive">
+            <li v-for="(item, index) in item.tickets" :key="item.id">
               {{ item.name }}
               <span>
                 {{ item.quantity }} x {{ item.price }}
@@ -113,8 +114,8 @@
             </li>
           </ul>
         </div>
-        <div v-if="ticketActive" class="v-right__check-total">
-          Итого: <span>{{ cartTotalAmount }} руб</span>
+        <div class="v-right__check-total">
+          Итого: <span>{{ totalAmount }} руб</span>
         </div>
       </div>
       <a href="#" class="v-right__check-btn">Оформить заказ</a>
