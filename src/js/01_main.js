@@ -63,6 +63,7 @@ var app = new Vue({
     prices: ['100', '300', '500', '1000'],
     // Страница Оформление заказа
     date: [], // тут данные с календаря
+    numbers: [ 1, 2, 3, 4, 5 ],
     hours: ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'], // Часы
     ticket: [
       {
@@ -85,17 +86,23 @@ var app = new Vue({
         price: 500,
         quantity: 0,
         timeStart: '15:00'
+      },
+      {
+        id: 4,
+        name: 'ne pokazyvat',
+        price: 330,
+        quantity: 0,
       }
     ],
     cart: {
       items: [
-        {
-          date: [],
-          time: [],
-          tickets: [],
-          totalCount: [],
-          totalAmount: [],
-        },
+        // {
+        //   date: [],
+        //   time: [],
+        //   tickets: [],
+        //   totalCount: [],
+        //   totalAmount: [],
+        // },
       ],
     },
     cartTime: null, // Выбранное время
@@ -107,8 +114,17 @@ var app = new Vue({
   methods: {
     addTime(value) {
       this.cartTime = value;
-      this.pickTicket = true;
-      this.isActive = !this.isActive;
+      if (this.cartTime) {
+        let data = {
+          date: [],
+          time: this.cartTime,
+          tickets: [],
+          totalCount: [],
+          totalAmount: [],
+        }
+        this.cart.items.push (data);
+        this.pickTicket = true;
+      }
     },
     addTicket(index) {
       this.cart.items.forEach(item => {
@@ -139,8 +155,8 @@ var app = new Vue({
         if (item.tickets[index].quantity < 1) {
           this.ticketActive = false;
           item.tickets.splice(index, 1);
-          // this.$delete(this.cart, index);
         }
+        // item.tickets = item.tickets.filter(i => i.id !== index.id);
       });
     },
   },
@@ -165,9 +181,22 @@ var app = new Vue({
         return totalQuantity;
       });
     },
-    // hourBtn() {
-    //   this.isActive = !this.isActive;
-    // },
+    getTickets() {
+      let cartTime = this.cartTime;
+      return this.ticket.filter(function (item) {
+        if (item.timeStart == cartTime) {
+          return item;
+          // console.log(item);
+        }
+      });
+    }
+    // checkStatusBtns(index) {
+    //   this.cart.items.forEach(item => {
+    //     if (item.time == this.cartTime) {
+    //       this.isActive = !this.isActive;
+    //     }
+    //   });
+    // }
   }
 });
 

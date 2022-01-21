@@ -34,7 +34,6 @@
           </div>
         </div>
         <div >
-          <VueHorizontalCalendar></VueHorizontalCalendar>
           //calendar
         </div>
       </div>
@@ -70,7 +69,7 @@
         </div>
         <div class="v-type__ticket-content">
           <ul>
-            <li v-for="(item, index) in ticket" :key="item.time">
+            <li v-for="(item, index) in getTickets" :key="item.timeStart">
               <div class="v-type__ticket-left">
                 <div class="v-type__ticket-name">{{ item.name }}</div>
                 <div class="v-type__ticket-price">{{ item.price }} руб</div>
