@@ -49,12 +49,6 @@ $('.open-text').click(function() {
   $('.open-text').text('Свернуть');
 });
 
-// Vue.component('vue-horizontal-calendar', {
-//   el: '#app',
-//   components: {
-//     VueHorizontalCalendar
-//   }
-// });
 
 var app = new Vue({
   el: '#app',
@@ -63,35 +57,48 @@ var app = new Vue({
     prices: ['100', '300', '500', '1000'],
     // Страница Оформление заказа
     date: [], // тут данные с календаря
-    numbers: [ 1, 2, 3, 4, 5 ],
-    hours: ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'], // Часы
+    hours: [
+      {
+        time: '10:00'
+      },
+      {
+        time: '12:00'
+      },
+      {
+        time: '14:00'
+      },
+      {
+        time: '16:00'
+      },
+    ],
     ticket: [
       {
         id: 1,
         name: 'Взрослый',
         price: 100,
         quantity: 0,
-        timeStart: '10:00'
+        start: '10:00'
       },
       {
         id: 2,
         name: 'Детский',
         price: 50,
         quantity: 0,
-        timeStart: '10:00'
+        start: '10:00'
       },
       {
         id: 3,
         name: 'Группам',
         price: 500,
         quantity: 0,
-        timeStart: '15:00'
+        start: '14:00'
       },
       {
         id: 4,
         name: 'ne pokazyvat',
         price: 330,
         quantity: 0,
+        // start: '10:00'
       }
     ],
     cart: {
@@ -104,100 +111,48 @@ var app = new Vue({
         //   totalAmount: [],
         // },
       ],
+      currentTime: null,
     },
-    cartTime: null, // Выбранное время
-    cartQuantityTotal: '', // Общее кол-во билетов в корзине -net
-    ticketActive: false, // показать ранее скрытый текст "Итого"
-    pickTicket: false,
-    isActive: false,
+    selected: false,
+    totalQuantity: 0,
   }),
+  // computed: {
+  //   totalQ(id) {
+  //     this.cart.items.forEach(item => {
+  //       item.tickets.forEach(q => {
+  //         this.totalQuantity = q.quantity += 1;
+  //       })
+  //     });
+  //   }
+  // },
   methods: {
     addTime(value) {
-      this.cartTime = value;
-      if (this.cartTime) {
-        let data = {
-          date: [],
-          time: this.cartTime,
-          tickets: [],
-          totalCount: [],
-          totalAmount: [],
-        }
-        this.cart.items.push (data);
-        this.pickTicket = true;
-      }
+      let t = value;
+      this.cart.currentTime = t.time;
+      this.selected = this.cart.currentTime;
+      let data = {
+        date: null,
+        time: this.cart.currentTime,
+        count: null,
+        amount: null,
+        tickets: [],
+      };
+      this.cart.items.push (data); //пушится дважды - исправить
     },
-    addTicket(index) {
+    addTicket(id) {
       this.cart.items.forEach(item => {
-        if (!item.tickets[index]) {
-          let data = {
-            id: this.ticket[index].id,
-            name: this.ticket[index].name,
-            price: this.ticket[index].price,
-            quantity: this.ticket[index].quantity,
-          }
-          item.time = this.cartTime;
-          item.tickets.push (data);
+        if (!item.tickets[id]) {
+          let tickets = {
+            id: this.ticket[id].id,
+            name: this.ticket[id].name,
+            price: this.ticket[id].price,
+            quantity: this.ticket[id].quantity,
+            start: this.ticket[id].start,
+          };
+          item.tickets.push (tickets);
         }
-        this.cartQuantityTotal = item.tickets[index].quantity += 1;
-        this.cartQuantityTotal = this.ticket[index].quantity += 1;
-        if (item.tickets[index].quantity >= 1) {
-          this.ticketActive = true;
-        }
-        console.log(this.cart);
-      });
-    },
-    deleteTicket(index) {
-      this.cart.items.forEach(item => {
-        if (item.tickets[index].quantity > 0) {
-          this.cartQuantityTotal = item.tickets[index].quantity -= 1;
-          this.cartQuantityTotal = this.ticket[index].quantity -= 1;
-        }
-        if (item.tickets[index].quantity < 1) {
-          this.ticketActive = false;
-          item.tickets.splice(index, 1);
-        }
-        // item.tickets = item.tickets.filter(i => i.id !== index.id);
+        item.tickets[id].quantity += 1;
       });
     },
   },
-  computed: {
-    cartTotalAmount() {
-      this.cart.items.forEach(item => {
-        let total = 0;
-        total = item.tickets.reduce( (acc, itemTotal) => {
-            return acc + (itemTotal.quantity * itemTotal.price)
-        }, 0);
-        item.totalAmount = total;
-        return total;
-      });
-    },
-    cartTotalCount() {
-      this.cart.items.forEach(item => {
-        let totalQuantity = 0;
-        totalQuantity = item.tickets.reduce( (acc, itemTotal) => {
-            return acc + (itemTotal.quantity)
-        }, 0);
-        item.totalCount = totalQuantity;
-        return totalQuantity;
-      });
-    },
-    getTickets() {
-      let cartTime = this.cartTime;
-      return this.ticket.filter(function (item) {
-        if (item.timeStart == cartTime) {
-          return item;
-          // console.log(item);
-        }
-      });
-    }
-    // checkStatusBtns(index) {
-    //   this.cart.items.forEach(item => {
-    //     if (item.time == this.cartTime) {
-    //       this.isActive = !this.isActive;
-    //     }
-    //   });
-    // }
-  }
-});
-
-
+})

@@ -725,13 +725,13 @@
             v-for='(hour, index) in hours' 
             :key='index' 
             @click='addTime(hour)'
-            v-bind:class="{ active: isActive }"
+            :class='selected == hour.time ? "active" : ""'
           >
-            {{ hour }}
+            {{ hour.time }}
           </div>
         </div>
       </div>
-      <div class="v-type__ticket" v-show="pickTicket">
+      <div class="v-type__ticket" v-if="selected.length">
         <div class="v-type__ticket-header">
           <div class="v-type__ticket-title">
             ТИП БИЛЕТА
@@ -747,14 +747,16 @@
         </div>
         <div class="v-type__ticket-content">
           <ul>
-            <li v-for="(item, index) in getTickets" :key="item.timeStart">
+            <li v-for="(item, index) in ticket" :key="item.id">
               <div class="v-type__ticket-left">
                 <div class="v-type__ticket-name">{{ item.name }}</div>
                 <div class="v-type__ticket-price">{{ item.price }} руб</div>
               </div>
               <div class="v-type__ticket-count">
                 <a @click="deleteTicket(index)" class="v-type__ticket-minus-plus__btn">-</a>
-                <span>{{ item.quantity }}</span>
+                <span>
+                  {{ quantity }}quantity
+                </span>
                 <a @click="addTicket(index)" class="v-type__ticket-minus-plus__btn">+</a>
               </div>
             </li>
@@ -793,7 +795,7 @@
           </ul>
         </div>
         <div class="v-right__check-total">
-          Итого: <span>{{ totalAmount }} руб</span>
+          Итого: <span>{{ }} total руб</span>
         </div>
       </div>
       <a href="#" class="v-right__check-btn">Оформить заказ</a>
