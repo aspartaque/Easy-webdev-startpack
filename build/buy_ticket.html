@@ -711,27 +711,36 @@
             </div>
           </div>
         </div>
-        <div >
-          //calendar
+        <v-calendar 
+          is-expanded
+          :masks="masks"
+          :attributes='attrs'
+          ref="pages"
+        >
+        </v-calendar>
+        <div v-for="date in dates" :key="date">
+          <a href="#" @click.prevent="getTimes(date)" :class="{'is-active': currentDate === date}">
+            {{ date }}
+          </a>
         </div>
       </div>
-      <div class="v-time__picker">
+      <div class="v-time__picker" v-if="currentDate">
         <div class="v-time__picker-title">
           Выберите время
         </div>
         <div class="v-time__picker-list">
           <div 
             class="v-time__pricker-btn"
-            v-for='(hour, index) in hours' 
-            :key='index' 
-            @click='addTime(hour)'
-            :class='selected == hour.time ? "active" : ""'
+            v-for="time in times" 
+            :key='time' 
+            @click.prevent="setTime(time)"
+            :class="{'active' : currentTime === time}"
           >
-            {{ hour.time }}
+            {{ time }}
           </div>
         </div>
       </div>
-      <div class="v-type__ticket" v-if="selected.length">
+      <div class="v-type__ticket" v-if="currentTime">
         <div class="v-type__ticket-header">
           <div class="v-type__ticket-title">
             ТИП БИЛЕТА
@@ -747,17 +756,17 @@
         </div>
         <div class="v-type__ticket-content">
           <ul>
-            <li v-for="(currentTicket, index) in ticket" :key="currentTicket.id" :currentTicket="currentTicket">
+            <li v-for="ticket in tickets" :key="ticket.id">
               <div class="v-type__ticket-left">
-                <div class="v-type__ticket-name">{{ currentTicket.name }}</div>
-                <div class="v-type__ticket-price">{{ currentTicket.price }} руб</div>
+                <div class="v-type__ticket-name">{{ ticket.name }}</div>
+                <div class="v-type__ticket-price">{{ ticket.price }} руб</div>
               </div>
               <div class="v-type__ticket-count">
-                <a @click="deleteTicket(index)" class="v-type__ticket-minus-plus__btn">-</a>
+                <a @click.prevent="removeTicket(ticket)" class="v-type__ticket-minus-plus__btn">-</a>
                 <span>
-                  {{ totalQuantity }}
+                  {{ ticket.quantity ? ticket.quantity : 0 }}
                 </span>
-                <a @click="addTicket(index)" class="v-type__ticket-minus-plus__btn">+</a>
+                <a @click.prevent="addTicket(ticket)" class="v-type__ticket-minus-plus__btn">+</a>
               </div>
             </li>
           </ul>
@@ -767,35 +776,35 @@
     <div class="v-right">
       <div class="v-right__check">
         <div class="v-right__check-info">
-          <ul v-for="(item, index) in cart.items" :key="item.id">
+          <ul v-for="elem in cart">
             <li>
               Адрес
               <span>
-                Национальный музей РС(Я)Кирова 9, 3 этаж
+                {{ event.address }}
               </span>
             </li>
             <li>
               Дата
               <span>
-                29 декабря 2021
+                {{ elem.date }}
               </span>
             </li>
             <li>
               Время
               <span>
-                {{ item.time }} 
+                {{ elem.time }} 
               </span>
             </li>
-            <li v-for="(item, index) in item.tickets" :key="item.id">
-              {{ item.name }}
+            <li v-for="ticket in elem.tickets">
+              {{ ticket.name }}
               <span>
-                {{ item.quantity }} x {{ item.price }}
+                {{ ticket.quantity }} x {{ ticket.price }}
               </span>
             </li>
           </ul>
         </div>
         <div class="v-right__check-total">
-          Итого: <span>{{ cartTotalAmount }} руб</span>
+          Итого: <span>{{ total }} руб</span>
         </div>
       </div>
       <a href="#" class="v-right__check-btn">Оформить заказ</a>
@@ -1091,8 +1100,7 @@
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<!-- <script src="https://unpkg.com/vue@next"></script> -->
-<!-- <script src='https://unpkg.com/v-calendar'></script> -->
+<script src='https://unpkg.com/v-calendar'></script>
 
 <script src="js/libs.min.js"></script>
 <script type="module" src="js/main.min.js"></script>

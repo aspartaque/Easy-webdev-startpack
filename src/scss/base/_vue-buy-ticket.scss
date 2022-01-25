@@ -391,3 +391,43 @@
     color: #FFFFFF;
   }
 }
+.v-calendar {
+  .vc-header {
+    background: #1738a0;
+    border-radius: 10px 10px 0 0;
+    padding: 33px 40px!important;
+  }
+  .vc-title {
+    color: #FFFFFF!important;
+    font-family: PTSerif;
+    font-style: normal!important;
+    font-weight: normal!important;
+    font-size: 20px!important;
+    line-height: 26px!important;
+    text-transform: uppercase;
+  }
+  .vc-arrows-container {
+    top: 23px!important;
+    padding: 8px 40px;
+  }
+  .vc-arrow:hover {
+    background: none;
+    border: 1px solid #FFFFFF;
+  }
+  .vc-svg-icon {
+    path {
+      fill: white!important;
+    }
+  }
+  .vc-day-box-center-center {
+    border: 1px solid #C7C7C7;
+    padding: 0;
+    span {
+      padding: 24px 0;
+    }
+  }
+  .vc-weekday {
+    border: 1px solid #C7C7C7;
+    padding: 17px 50px;
+  }
+}
