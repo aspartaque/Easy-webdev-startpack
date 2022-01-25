@@ -111,35 +111,85 @@ var app = new Vue({
         //   totalAmount: [],
         // },
       ],
-      currentTime: null,
     },
+    currentTime: null,
     selected: false,
     totalQuantity: 0,
   }),
-  // computed: {
-  //   totalQ(id) {
-  //     this.cart.items.forEach(item => {
-  //       item.tickets.forEach(q => {
-  //         this.totalQuantity = q.quantity += 1;
-  //       })
-  //     });
+  // mounted: {
+  //   getHours() {
+  //     let currentHour = this.ticket.start;
+  //     return this.hours.filter(function (item) {
+  //       if (item.time == currentHour) {
+  //         console.log(item);
+  //         return item;
+  //       }
+  //     })
   //   }
   // },
+  computed: {
+    cartTotalAmount() {
+      this.cart.items.forEach(item => {
+        let total = 0;
+        total = item.tickets.reduce( (acc, itemTotal) => {
+            return acc + (itemTotal.quantity * itemTotal.price)
+        }, 0);
+        return item.amount = total;
+      });
+    },
+    cartTotalCount() {
+      this.cart.items.forEach(item => {
+        let totalQuantity = 0;
+        totalQuantity = item.tickets.reduce( (acc, itemTotal) => {
+            return acc + (itemTotal.quantity)
+        }, 0);
+        item.count = totalQuantity;
+        return totalQuantity;
+      });
+    },
+    // clearCartTime() {
+    //   this.cart.items.forEach(item => {
+    //     if (item.tickets.length == 0) {
+    //       item = item.filter((currentTicket) => currentTicket.id !== currentTicket.id);
+    //     }
+    //   })
+    // },
+    // getTickets() {
+    //   let time = this.cart.currentTime;
+    //   return this.ticket.filter(function (currentList) {
+    //     if (currentList.start == time) {
+    //       return currentList;
+    //     }
+    //   });
+    // },
+    // pushTime() {
+    //   let data = {
+    //     date: null,
+    //     time: this.cart.currentTime,
+    //     count: null,
+    //     amount: null,
+    //     tickets: [],
+    //   };
+    //   this.cart.reduce( (item) => {
+    //     return item.items.push (data); //пушится дважды - исправить
+    //   }, 0);
+    // }
+  },
   methods: {
     addTime(value) {
       let t = value;
-      this.cart.currentTime = t.time;
-      this.selected = this.cart.currentTime;
+      this.currentTime = t.time;
+      this.selected = this.currentTime;
+    },
+    addTicket(id) {
       let data = {
         date: null,
-        time: this.cart.currentTime,
+        time: this.currentTime,
         count: null,
         amount: null,
         tickets: [],
       };
       this.cart.items.push (data); //пушится дважды - исправить
-    },
-    addTicket(id) {
       this.cart.items.forEach(item => {
         if (!item.tickets[id]) {
           let tickets = {
@@ -151,8 +201,19 @@ var app = new Vue({
           };
           item.tickets.push (tickets);
         }
-        item.tickets[id].quantity += 1;
+        this.totalQuantity = item.tickets[id].quantity += 1;
       });
     },
+    deleteTicket(id) {
+      this.cart.items.forEach(item => {
+        if (item.tickets[id].quantity > 0) {
+          this.totalQuantity = item.tickets[id].quantity -= 1;
+        }
+        if (item.tickets[id].quantity < 1) {
+          item.tickets = item.tickets.filter((currentTicket) => currentTicket.id !== currentTicket.id);
+          console.log('da');
+        }
+      })
+    }
   },
 })

@@ -69,15 +69,15 @@
         </div>
         <div class="v-type__ticket-content">
           <ul>
-            <li v-for="(item, index) in ticket" :key="item.id">
+            <li v-for="(currentTicket, index) in ticket" :key="currentTicket.id" :currentTicket="currentTicket">
               <div class="v-type__ticket-left">
-                <div class="v-type__ticket-name">{{ item.name }}</div>
-                <div class="v-type__ticket-price">{{ item.price }} руб</div>
+                <div class="v-type__ticket-name">{{ currentTicket.name }}</div>
+                <div class="v-type__ticket-price">{{ currentTicket.price }} руб</div>
               </div>
               <div class="v-type__ticket-count">
                 <a @click="deleteTicket(index)" class="v-type__ticket-minus-plus__btn">-</a>
                 <span>
-                  {{ quantity }}quantity
+                  {{ totalQuantity }}
                 </span>
                 <a @click="addTicket(index)" class="v-type__ticket-minus-plus__btn">+</a>
               </div>
@@ -104,7 +104,7 @@
             </li>
             <li>
               Время
-              <span v-for="(item, index) in item.tickets" :key="item.id">
+              <span>
                 {{ item.time }} 
               </span>
             </li>
@@ -117,7 +117,7 @@
           </ul>
         </div>
         <div class="v-right__check-total">
-          Итого: <span>{{ }} total руб</span>
+          Итого: <span>{{ cartTotalAmount }} руб</span>
         </div>
       </div>
       <a href="#" class="v-right__check-btn">Оформить заказ</a>
