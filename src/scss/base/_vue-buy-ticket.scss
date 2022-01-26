@@ -420,14 +420,46 @@
     }
   }
   .vc-day-box-center-center {
-    border: 1px solid #C7C7C7;
     padding: 0;
     span {
       padding: 24px 0;
+      font-family: PTSerif!important;
+      font-style: normal!important;
+      font-weight: normal!important;
+      font-size: 28px!important;
+      line-height: 37px!important;
+      text-transform: uppercase!important;
+      color: #04091A!important;
     }
+  }
+  .vc-container {
+    border: none!important;
+  }
+  .vc-weeks {
+    padding: 0!important;
   }
   .vc-weekday {
     border: 1px solid #C7C7C7;
-    padding: 17px 50px;
+    padding: 17px 0!important;
+    font-family: PTSerif!important;
+    font-style: normal!important;
+    font-weight: normal!important;
+    font-size: 20px!important;
+    line-height: 26px!important;
+    text-transform: uppercase!important;
+    color: #04091A!important;
+  }
+  .vc-day-content {
+    width: 100%!important;
+    height: 100%!important;
+    border-radius: 0!important;
+    border: 1px solid #C7C7C7;
+    &:hover {
+      border: 1px solid #EC7708;
+      background-color: unset!important;
+    }
+  }
+  .week-1, .week-2, .week-3, .week-4, .week-6 {
+    display: none!important;
   }
 }

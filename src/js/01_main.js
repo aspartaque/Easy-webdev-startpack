@@ -65,17 +65,8 @@ var app = new Vue({
         title: 'MMM',
         weekdays: 'WWW',
       },
-      attrs: [
-        {
-          days: 7,
-          weeks: 1
-        }
-      ]
 		};
 	},
-  // components: {
-  //   Calendar,
-  // },
 	mounted() {
 		this.event = {
 			event_id: 1001,
@@ -83,24 +74,27 @@ var app = new Vue({
 		};
 	},
 	methods: {
-    getTimes: function (date) {
+    getDate: function (day) { //get date from calendar
       this.currentTime = null;
-			this.currentDate = date;
+      let currentDate = {
+        id: day.id,
+        ariaLabel: day.ariaLabel,
+        day: day.day,
+        months: day.month,
+        year: day.year
+      };
+      this.currentDate = currentDate;
       
-			// get times API
-			// example
-      
-			this.times = ['12:00', '13:00'];
-		},
+      this.times = ['12:00', '13:00'];
+    },
 		setTime: function (time) {
       this.currentTime = time;
 			this.tickets = this.getTickets(time);
 		},
 		getTickets: function (time) {
       // return API
-      console.log(this.$refs.pages.pages);
 			console.log('get API time:', time);
-      this.$refs.pages.pages[0].days[5].label = '222';
+
 			let tickets = {
 				1: {
 					id: 1,
@@ -116,12 +110,12 @@ var app = new Vue({
 				},
 			};
 
-			if (this.cart[this.currentDate + this.currentTime]) {
-				for (let key in this.cart[this.currentDate + this.currentTime][
+			if (this.cart[this.currentDate.id + this.currentTime]) {
+				for (let key in this.cart[this.currentDate.id + this.currentTime][
 					'tickets'
 				]) {
 					tickets[key]['quantity'] =
-						this.cart[this.currentDate + this.currentTime]['tickets'][key][
+						this.cart[this.currentDate.id + this.currentTime]['tickets'][key][
 							'quantity'
 						];
 				}
@@ -131,7 +125,7 @@ var app = new Vue({
 		addTicket: function (ticket) {
 			ticket.quantity++;
 
-			if (!this.cart[this.currentDate + this.currentTime]) {
+			if (!this.cart[this.currentDate.id + this.currentTime]) {
 				const data = {
 					event_id: this.event.event_id,
 					date: this.currentDate,
@@ -139,10 +133,10 @@ var app = new Vue({
 					address: this.event.address,
 					tickets: {},
 				};
-				this.cart[this.currentDate + this.currentTime] = data;
+				this.cart[this.currentDate.id + this.currentTime] = data;
 			}
 
-			this.cart[this.currentDate + this.currentTime]['tickets'][ticket.id] = {
+			this.cart[this.currentDate.id + this.currentTime]['tickets'][ticket.id] = {
 				...ticket,
 			};
 
@@ -155,7 +149,7 @@ var app = new Vue({
 			// если больше 0 то минусуем
 			if (ticket.quantity > 1) {
 				ticket.quantity--;
-				this.cart[this.currentDate + this.currentTime]['tickets'][ticket.id] = {
+				this.cart[this.currentDate.id + this.currentTime]['tickets'][ticket.id] = {
 					...ticket,
 				};
 			} else {
@@ -163,16 +157,16 @@ var app = new Vue({
 					ticket.quantity--;
 				}
 				// если 1 то удаляем из массива
-				delete this.cart[this.currentDate + this.currentTime]['tickets'][
+				delete this.cart[this.currentDate.id + this.currentTime]['tickets'][
 					ticket.id
 				];
 
 				if (
 					this.isEmpty(
-						this.cart[this.currentDate + this.currentTime]['tickets']
+						this.cart[this.currentDate.id + this.currentTime]['tickets']
 					)
 				) {
-					delete this.cart[this.currentDate + this.currentTime];
+					delete this.cart[this.currentDate.id + this.currentTime];
 				}
 			}
 
