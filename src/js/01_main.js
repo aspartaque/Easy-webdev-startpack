@@ -56,22 +56,27 @@ var app = new Vue({
 			dates: ['28-01-2022', '29-01-2022', '30-01-2022'],
 			times: [],
 			currentDate: null,
+			currentDateStatus: false,
 			currentTime: null,
 			event: {},
 			tickets: [],
 			cart: {},
 			total: 0,
       masks: {
-        title: 'MMM',
+        // title: 'MMM',
         weekdays: 'WWW',
       },
 		};
-	},
+	},	
 	mounted() {
 		this.event = {
 			event_id: 1001,
 			address: 'ул. Ленина 1',
 		};
+		// const ref = this.$refs.calendar.pages[0];
+		// ref.weeks = 1;
+		// ref.title = 'wadwa';
+		// ref.days = {};
 	},
 	methods: {
     getDate: function (day) { //get date from calendar
@@ -84,7 +89,7 @@ var app = new Vue({
         year: day.year
       };
       this.currentDate = currentDate;
-      
+			this.currentDateStatus = true;
       this.times = ['12:00', '13:00'];
     },
 		setTime: function (time) {
@@ -170,6 +175,10 @@ var app = new Vue({
 				}
 			}
 
+			this.updateTotal();
+		},
+		removeTicketFull: function (elem) {
+			delete this.cart[this.currentDate.id + this.currentTime];
 			this.updateTotal();
 		},
 		isEmpty: function (obj) {

@@ -7,6 +7,7 @@
           :masks="masks"
           locale="ru"
           @dayclick='getDate'
+          ref="calendar"
         >
         </v-calendar>
       </div>
@@ -62,7 +63,13 @@
     <div class="v-right">
       <div class="v-right__check">
         <div class="v-right__check-info">
-          <ul v-for="elem in cart">
+          <ul v-for="(elem, index) in cart">
+            <li class="ticket-title">
+              Билет №1
+              <span>
+                <a class="remove-ticket" href="#" @click.prevent="removeTicketFull(elem)">Отменить</a>
+              </span>
+            </li>
             <li>
               Адрес
               <span>

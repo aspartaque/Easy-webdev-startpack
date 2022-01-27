@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Easy-webdev-startpack v3.0",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<main class="main">
+		<section class="l-buy__ticket">
+      <div class="l-container">
+        <div class="l-buy__ticket-container flex --dir-col">
+          <div class="l-breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Здания и часы работы </a>
+              </li>
+            </ul>
+          </div>
+          <div class="l-buy__ticket-wrapper">
+            <div class="l-title">
+              <h1>Оформление заказа</h1>
+            </div>
+            <div class="cart__container">
+              <div class="cart__container-info">
+                <div class="cart__container-item">
+                  <div class="cart__info-event">
+                    <ul>
+                      <li>
+                        <svg class="img location_map-icon">
+                          <use xlink:href="img/sprite.svg#css--location-map"></use>
+                        </svg>
+                        Национальный музей РС(Я) Кирова9, 3 этаж
+                      </li>
+                      <li>
+                        <svg class="img location_map-icon">
+                          <use xlink:href="img/sprite.svg#css--calendar-orange"></use>
+                        </svg>
+                        29 декабря 2021
+                      </li>
+                      <li>
+                        <svg class="img location_map-icon">
+                          <use xlink:href="img/sprite.svg#css--time"></use>
+                        </svg>
+                        10:10
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="cart__info-tickets" v-if="currentTime">   
+                    <div class="v-type__ticket-header">
+                      <div class="v-type__ticket-title">
+                        БИЛЕТ
+                      </div>
+                      <div class="v-type__ticket-right">
+                        <div class="v-type__ticket-title">
+                          СТОИМОСТЬ
+                        </div>
+                        <div class="v-type__ticket-title">
+                          КОЛИЧЕСТВО
+                        </div>
+                      </div>
+                    </div>
+                    <div class="v-type__ticket-content">
+                      <ul>
+                        <li v-for="ticket in tickets" :key="ticket.id">
+                          <div class="v-type__ticket-left">
+                            <div class="v-type__ticket-name">{{ ticket.name }}</div>
+                            <div class="v-type__ticket-price">{{ ticket.price }} руб</div>
+                          </div>
+                          <div class="v-type__ticket-count">
+                            <a @click.prevent="removeTicket(ticket)" class="v-type__ticket-minus-plus__btn">-</a>
+                            <span>
+                              {{ ticket.quantity ? ticket.quantity : 0 }}
+                            </span>
+                            <a @click.prevent="addTicket(ticket)" class="v-type__ticket-minus-plus__btn">+</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>  
+                  </div>
+                </div>
+                <div class="v-right__check-total">
+                  Итого: <span>{{ total }} руб</span>
+                </div>
+              </div>
+              <div class="cart__container-form">
+                <form action="">
+                  <div class="v-right__check">
+                    <div class="l-donate-form">
+                      <input type="text" placeholder="ФИО*" required>
+                      <input type="text" placeholder="Телефон">
+                      <input type="text" placeholder="E–mail*" required>
+                      <div class="l-donate-form-checkbox">
+                        <input type="checkbox" name="checkbox" id="check" required/>
+                        <span>Согласен с условиями 
+                          <b>
+                            пользовательского соглашения и правилами покупки билетов
+                          </b>
+                        </span>
+                      </div>
+                      <div class="l-donate-form-checkbox">
+                        <input type="checkbox" name="checkbox" id="check"/>
+                        <span>Получать информацию от музея по e-mail</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="button-pay">Оплатить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	</main>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
