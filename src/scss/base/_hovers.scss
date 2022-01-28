@@ -142,6 +142,9 @@
     color: #FFFFFF;
     border-color: #f79131;
   }
+  &:focus {
+    color: #f79131;
+  }
 }
 .l-main_info-rules {
   a:hover {

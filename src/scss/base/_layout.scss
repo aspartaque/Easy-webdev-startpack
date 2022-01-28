@@ -8,9 +8,7 @@
   width: 100%;
   ul {
     display: flex;
-    @media screen and (max-width: 620px) {
-      overflow: scroll;
-    }
+    overflow: auto;
     li {
       position: relative;
       white-space: nowrap;

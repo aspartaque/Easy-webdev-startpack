@@ -61,6 +61,7 @@
 .swiper-slide-active {
   a {
     pointer-events: all;
+    outline: none;
     @media screen and (max-width: 960px) {
       position: relative;
       margin: 0 auto;
@@ -68,7 +69,7 @@
   }
 }
 .under-slide-container {
-  max-width: 590px;
+  max-width: fit-content;
   width: 100%;
   padding: 0 15px;
   display: flex;

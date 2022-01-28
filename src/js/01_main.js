@@ -46,7 +46,7 @@ $('.l-virtual__descr-open-btn').click(function() {
 /*section collections text open*/
 $('.open-text').click(function() {
   $('.l-collections-small-container').toggleClass('opened-text');
-  $('.open-text').text('Свернуть');
+	$('.open-text').text('Свернуть');
 });
 
 var app = new Vue({
