@@ -39,6 +39,9 @@
     top: 157px;
     padding: 0 15px;
   }
+  @media screen and (max-width: 420px) {
+    top: 135px;
+  }
 }
 .l-video__banner-content__title {
   width: 60%;

@@ -282,8 +282,10 @@ $mainColor: #1738A0;
 .l-container-nav {
   width: 100%;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 20px;
 }
 .l-header__inner-nav {
   .dropdown-menu-custom {
